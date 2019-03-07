@@ -31,10 +31,10 @@
       </p>
       <div class="review-favor"> 
         <div class="like">
-          <i (click)='likeReview(i)'></i><span *ngIf='review.like > 0'>({{review.like}})</span>
+          <i (click)='likeReview(i)' title='Like Review'></i><span *ngIf='review.like > 0'>({{review.like}})</span>
         </div>
         <div class="dislike">
-          <i (click)='dislikeReview(i)'></i><span *ngIf='review.dislike > 0'>({{review.dislike}})</span> 
+          <i (click)='dislikeReview(i)' title='Dislike Review'></i><span *ngIf='review.dislike > 0'>({{review.dislike}})</span> 
         </div>
       </div>
     </div>

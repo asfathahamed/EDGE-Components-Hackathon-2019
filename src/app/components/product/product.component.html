@@ -17,7 +17,7 @@
             <tbody>
               <tr>
                 <td class='size'>
-                  <input type="radio" [name]="sizes" [id]="size.size" [value]="size.size" [(ngModel)]='product.selectedSize' (click)='product.price=size.price' [checked]='true'  />
+                  <input type="radio" [name]="sizes" [id]="size.size" [value]="size.size" [(ngModel)]='product.selectedSize' (click)='product.price=size.price; product.selectedSize=size.size' [checked]='true'  />
                   <label [for]="size.size">{{ size.size }}</label>
                 </td>
                 <td class='priceTag'>

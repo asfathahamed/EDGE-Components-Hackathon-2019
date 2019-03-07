@@ -18,7 +18,7 @@
 				<td>{{ item.name | truncate:[25, '...']}}</td>
 				<td>{{ item.price | currency : 'INR' }}</td>
 				<td>
-					<span *ngIf='item.selectedSize == "" else standardSize'>{{ item.selectedSize }}</span>									
+					<span *ngIf='item.selectedSize !== "" else standardSize'>{{ item.selectedSize }}</span>									
 					<ng-template #standardSize>
 						<span>Large</span>									
 					</ng-template>

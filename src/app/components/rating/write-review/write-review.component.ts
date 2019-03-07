@@ -30,10 +30,6 @@ export class WriteReviewComponent implements OnInit {
   get name() { return this.reviewForm.get('name')}
   get email() { return this.reviewForm.get('email')}
 
-  //list of pattern
-  //private pattern_email = "^[a-zA-Z0-9]{3,}$"; //alphanumeric
-  private pattern_email = '/^([\w\.\+]{1,})([^\W])(@)([\w]{1,})(\.[\w]{1,})+$/'; //alphanumeric
-
   constructor(
     private WriteReviewService: WriteReviewService, 
     private fb: FormBuilder, 
@@ -81,15 +77,21 @@ export class WriteReviewComponent implements OnInit {
       "like": 0,
 			"dislike": 0
     }
-    console.log(payload)
     this.GetDataService.funcPostReview(this.getIndex, payload)    
   }
 
-  showPopup() {this.loadReviewForm();this.isPopupVisible = true; this.isAddPopupVisible = true}
+  showPopup() {
+    this.userRating = 0 //reset rating  
+    this.loadReviewForm();
+    this.isPopupVisible = true; 
+    this.isAddPopupVisible = true
+  }
+
   hidePopup() {
     this.isPopupVisible = false;
     this.isAddPopupVisible = false;
-    this.isCancelPopupVisible = false;    
+    this.isCancelPopupVisible = false;  
+    
   }
 
   getCloseConfirm(){ //get confirmation for discarding the change

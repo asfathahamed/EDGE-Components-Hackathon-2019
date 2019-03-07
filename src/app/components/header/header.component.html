@@ -33,8 +33,8 @@
 			<div class="miniCart">
 				<div class='clearfix miniCartItemWrap'>
 					<div class='clearfix miniCartItem' *ngFor="let cartItem of cartItemList">
-						<div class="col-sm-4 bag-left"><img [src]="cartItem.img" /></div>
-						<div class="col-sm-8">
+						<div class="col-xs-3 col-sm-4 bag-left"><img [src]="cartItem.img" /></div>
+						<div class="col-xs-9 col-sm-8">
 							<div class='miniCartPriceCont clearfix'>
 								<div class='miniCartPrice pull-left'>
 									{{cartItem.price | currency : 'INR'}}
@@ -47,7 +47,7 @@
 							<div class='miniCartPriceCont clearfix'>
 								<div class='pull-left'>size:</div>
 								<div class='pull-right'>
-									<span *ngIf='cartItem.selectedSize == "" else standardSize'>{{ cartItem.selectedSize }}</span>									
+									<span *ngIf='cartItem.selectedSize !== "" else standardSize'>{{ cartItem.selectedSize }}</span>									
 									<ng-template #standardSize>
 										<span>Large</span>									
 									</ng-template>									
