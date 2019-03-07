@@ -1,21 +1,30 @@
-# \<notification-banner\>
+# EDGE-Components-Hackathon-2019
 
-a customized notification banner in Polymer 3.0
-
-## Install the Polymer-CLI
-
-First, make sure you have the [Polymer CLI](https://www.npmjs.com/package/polymer-cli) and npm (packaged with [Node.js](https://nodejs.org)) installed. Run `npm install` to install your element's dependencies, then run `polymer serve` to serve your element locally.
-
-## Viewing Your Element
+# Set up for Polymer Component: Navigate to polymer folder and follow the below instructions.
+## Project setup
+```
+npm install -g polymer-cli
+````
 
 ```
-$ polymer serve
+npm install
 ```
 
-## Running Tests
-
+### Serve the component
 ```
-$ polymer test
+polymer serve --open
 ```
 
-Your application is already set up to be tested via [web-component-tester](https://github.com/Polymer/web-component-tester). Run `polymer test` to run your application's test suite locally.
+````
+Or Navigate to 
+http://127.0.0.1:8081/components/hackathon-demo/
+````
+
+#### For testing use the below mentioned url
+````
+http://127.0.0.1:8081/components/hackathon-demo/components/notification-banner/test/
+````
+
+````
+http://127.0.0.1:8081/components/hackathon-demo/components/review-rating/test/
+````

@@ -11,6 +11,13 @@ import {html, PolymerElement} from '@polymer/polymer/polymer-element.js';
 class HackathonDemo extends PolymerElement {
   static get template() {
     return html`
+        <a href="../components/notification-banner/">
+          Notification Banner Demo
+        </a>
+        <br />
+        <a href="../components/review-rating/">
+          Review and Rating Demo 
+        </a>
     `;
   }
 

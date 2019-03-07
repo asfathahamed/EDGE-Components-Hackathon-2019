@@ -98,13 +98,14 @@ const template = html`
         }
 
         .btn-submit {
-          width: var(--review-rating-btn-submit-width,  80px);
+          width: var(--review-rating-btn-submit-width,  150px);
           color: var(--review-rating-btn-submit-color, #FFFFFF);
           background-color: var(--review-rating-btn-submit-bg-color, #3f51b5);
+          line-height: 18px;
         }
 
         .btn-cancel {
-          width: var(--review-rating-btn-cancel-width,  80px);
+          width: var(--review-rating-btn-cancel-width,  150px);
           color: var(--review-rating-btn-cancel-color, #FFFFFF);
           background-color: var(--review-rating-btn-cancel-bg-color, #9e9e9e);
         }

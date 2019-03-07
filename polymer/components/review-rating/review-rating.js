@@ -35,7 +35,7 @@ class ReviewRating extends mixinBehaviors([AppLocalizeBehavior], PolymerElement)
               id="star_[[item.id]]" 
               checked="{{item.checked::tap}}">
               <label for$=star_[[item.id]] id="label_[[item.id]]">☆</label>
-              <paper-tooltip for$="label_[[item.id]]p">
+              <paper-tooltip for$="label_[[item.id]]">
                 <slot name="slot-[[item.id]]"></slot>
               </paper-tooltip>
             </template>
