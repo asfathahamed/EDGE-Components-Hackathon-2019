@@ -1,7 +1,7 @@
 # EDGE-Components-Hackathon-2019
 # Theme Change Component
 
-The Theme Change component is useful for changing the theme of a page which is having the features like changing color,text-alignment,font-style and font-family of a page. 
+The Theme Change component is useful for changing the theme of a page which is having the features like changing theme color,text-alignment,font-style and font-family of a page. 
 
  #### Before Applying Theme
 <p align="center"> 
