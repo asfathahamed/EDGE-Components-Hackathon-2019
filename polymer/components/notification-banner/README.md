@@ -33,7 +33,7 @@ as notification
 </notification-banner>
 
 
-`````
+````
 as toast
 
 <notification-banner 
@@ -41,9 +41,9 @@ as toast
   text="message to be shown to user"
   opened="true|false"
   toast-timeout="time in miliseconds toast need to be visible"
-  toast-position="top-left|top-right|bottom-right|bottom-left"
-></notification-banner>
-`````
+  toast-position="top-left|top-right|bottom-right|bottom-left">
+</notification-banner>
+````
 
 ### Styling
 The following custom properties and mixins are available for styling:
