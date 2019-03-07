@@ -18,7 +18,9 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 
 ## Demo
 You may want to have a look at the demo 
-https://kkvipvzn.github.stackblitz.io
+
+https://hackathon007.stackblitz.io
+
 https://hackathon2019.stackblitz.io
 
 ## Test cases
