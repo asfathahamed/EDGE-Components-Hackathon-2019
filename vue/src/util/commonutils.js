@@ -13,16 +13,17 @@ function isValidDate(dateVal) {
 }
 function validTimerProps(props) {
   if (
-    !isEmpty(props.daylabel) &&
-    !isEmpty(props.hourlabel) &&
-    !isEmpty(props.minlabel) &&
-    !isEmpty(props.seclabel) &&
-    !isEmpty(props.startdt) &&
-    !isEmpty(props.expirydt) &&
-    !isEmpty(props.prelabel) &&
-    !isEmpty(props.postlabel) &&
-    !isEmpty(props.agolabel) &&
-    typeof props.showtimer == "boolean"
+    !isEmpty(props.dayLabel) &&
+    !isEmpty(props.hourLabel) &&
+    !isEmpty(props.minLabel) &&
+    !isEmpty(props.secLabel) &&
+    !isEmpty(props.startDateUtc) &&
+    !isEmpty(props.expiryDateUtc) &&
+    !isEmpty(props.beforeExpiryLabel) &&
+    !isEmpty(props.afterExpiryLabel) &&
+    !isEmpty(props.afterExpiryAdditionalLabel) &&
+    !isEmpty(props.showTimer) &&
+    (props.showTimer == "true" || props.showTimer == "false")
   ) {
     return true;
   } else {
@@ -46,7 +47,6 @@ function inactivityTime(alertTime, postInactivityWaitTime) {
   window.onunload = removeListeners;
 
   function addListener() {
-    console.log(alertTime, postInactivityWaitTime);
     var events = TIMEOUT_EVENTS_TO_LISTEN;
     events.forEach(function(name) {
       window.addEventListener(name, resetTimer, true);
@@ -75,11 +75,13 @@ function inactivityTime(alertTime, postInactivityWaitTime) {
       )
     ) {
       if (new Date() < waitTill) {
+        /* eslint-disable no-console */
         console.log(
           "Timer has been reset as the user clicked 'ok' with in the accepted time range"
         );
         resetTimer();
       } else {
+        /* eslint-disable no-console */
         console.log(
           "User clicked 'ok' after the time range so timer is cleared."
         );
@@ -93,6 +95,7 @@ function inactivityTime(alertTime, postInactivityWaitTime) {
   function clearTimerAndRemoveListerners() {
     clearTimer();
     removeListeners();
+    /* eslint-disable no-console */
     console.log("Web page timed out! Do the business logic here!");
   }
 
