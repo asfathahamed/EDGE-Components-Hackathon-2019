@@ -40,7 +40,15 @@ export class GetdataService {
 
   // Like the existing review
   funcLikeReview(id, reviewId) {
-    this.getProductList.productItems[id-1].review[reviewId].like = this.getProductList.productItems[id-1].review[reviewId].like + 1;
+    if(this.getProductList.productItems[id-1].review[reviewId].like == '' || 
+    this.getProductList.productItems[id-1].review[reviewId].like == NaN ||
+    this.getProductList.productItems[id-1].review[reviewId].like == 'undefined' ) {
+      this.getProductList.productItems[id-1].review[reviewId].like = 1;
+    } else {
+      this.getProductList.productItems[id-1].review[reviewId].like = this.getProductList.productItems[id-1].review[reviewId].like + 1;
+    }
+    console.log('this.getProductList.productItems[id-1].review[reviewId].like')
+    console.log(this.getProductList.productItems[id-1].review[reviewId].like)
     this.updatedProductList.next(this.getProductList);
   }
 
