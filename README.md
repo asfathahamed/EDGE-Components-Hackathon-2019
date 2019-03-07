@@ -145,13 +145,14 @@ To preview the rating components [Click here](https://rjomv8kmyo.codesandbox.io/
             this.props.updateRating(this.state.currentRating);
         })
     }
-    ```
+    
+  ```
+    
   
   
- # Dependecies:-
- 
-   ```  
+# Dependencies 
+```  
    styled-components
-  @material-ui/core/Tooltip
-  @material-ui/core/Zoom  
-   ```
+   @material-ui/core/Tooltip
+   @material-ui/core/Zoom  
+ ```
