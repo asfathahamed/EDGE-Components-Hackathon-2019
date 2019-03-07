@@ -30,8 +30,8 @@ const template = html`
 
         paper-dialog span.icon-close {
           display: inline-block;
-          background-color: var(--review-rating-paper-dialog-bg-color, #ffffff);
-          border: 1px solid var(--review-rating-paper-dialog-border-color, #e5e5e5);
+          background-color: var(--review-rating-icon-close-bg-color, #ffffff);
+          border: 1px solid var(--review-rating-icon-close-border-color, #e5e5e5);
           width: 32px;
           border-radius: 100px;
           cursor: pointer;
@@ -46,7 +46,7 @@ const template = html`
           text-align: center;
           position: relative;
           top: 45px;
-          border: 1px solid #5BAB29;
+          border: 1px solid var(--review-rating-icon-check-color, #5BA829);
           border-radius: 100px;
         }
 
@@ -99,15 +99,16 @@ const template = html`
 
         .btn-submit {
           width: var(--review-rating-btn-submit-width,  150px);
-          color: var(--review-rating-btn-submit-color, #FFFFFF);
+          color: var(--review-rating-btn-submit-color, #ffffff);
           background-color: var(--review-rating-btn-submit-bg-color, #3f51b5);
           line-height: 18px;
         }
 
         .btn-cancel {
           width: var(--review-rating-btn-cancel-width,  150px);
-          color: var(--review-rating-btn-cancel-color, #FFFFFF);
+          color: var(--review-rating-btn-cancel-color, #ffffff);
           background-color: var(--review-rating-btn-cancel-bg-color, #9e9e9e);
+          line-height: 18px;
         }
         
         @media screen and (max-width: 767px) {

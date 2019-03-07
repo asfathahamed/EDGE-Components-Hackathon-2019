@@ -12,24 +12,29 @@ to the user in the form of toast
 Example:
 `````
 as notification
+
 <notification-banner 
   type="success|error|warning|info|custom" 
   text="message to be shown to user"
   icon-type="icon that can be shown  if the type is set to custom"
   opened="true|false">
 </notification-banner>
+A custom event 'banner-closed' is triggered when user closes the notification banner
 
 
-```````
+````
 as toast
+
 <notification-banner 
   toast
   text="message to be shown to user"
   opened="true|false"
   toast-timeout="time in miliseconds toast need to be visible"
-  toast-position="top-left|top-right|bottom-right|bottom-left"
-></notification-banner>
-```````
+  toast-position="top-left|top-right|bottom-right|bottom-left">
+</notification-banner>
+A custom event 'toast-closed' is triggered when toast is closed
+
+````
 
 ### Styling
 The following custom properties and mixins are available for styling:

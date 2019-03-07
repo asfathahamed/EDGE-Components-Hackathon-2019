@@ -31,6 +31,7 @@ as notification
   icon-type="icon that can be shown  if the type is set to custom"
   opened="true|false">
 </notification-banner>
+A custom event 'banner-closed' is triggered when user closes the notification banner
 
 
 ````
@@ -43,6 +44,8 @@ as toast
   toast-timeout="time in miliseconds toast need to be visible"
   toast-position="top-left|top-right|bottom-right|bottom-left">
 </notification-banner>
+A custom event 'toast-closed' is triggered when toast is closed
+
 ````
 
 ### Styling
