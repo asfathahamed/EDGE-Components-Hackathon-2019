@@ -1,7 +1,7 @@
 # EDGE-Components-Hackathon-2019
 # Date Spinner Component
 
-The Date Spinner Component is useful for selecting date by spinning or by selecting from dropdown 
+The Date Spinner Component is useful for selecting date by spinning or by selecting from dropdown.
 
 <p align="center">
   <img width="800" height="400" src="https://github.com/ERS-HCL/EDGE-Components-Hackathon-2019/blob/ERSEDGE022019037/Image/date_spinner_preview.PNG">
@@ -14,7 +14,7 @@ Download the Date Spinner Component folder and install the required packages and
 
 ### Installing
 
-Installing node_module use command `npm install`
+For installing node_modules use command `npm install`
 
 ### Run server
 
