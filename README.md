@@ -1,6 +1,6 @@
 # EDGE-Components-Hackathon-2019
 
-# ContextMenu
+# React ContextMenu
 
 This project was generated with [React JS](https://github.com/reactjs) version 16.8.4.
 
