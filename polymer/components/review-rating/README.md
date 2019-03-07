@@ -1,4 +1,4 @@
-# \<notification-banner\>
+# \<review-rating\>
 
 a customized rating and review component in Polymer 3.0
 
@@ -20,17 +20,16 @@ http://127.0.0.1:8081/review-rating/test/
 
 ## Basic info about review-rating component
 <review-rating> component can be used to rate a service and provide feedback for improvement with support for 
-localization support
+localization
 
 Example:
 ````
-as notification
 <review-rating>
-    <span slot="slot-1">Awful</span>
-    <span slot="slot-2">Good</span>
-    <span slot="slot-3">Very Good</span>
-    <span slot="slot-5">Awesome</span>
-    <span slot="slot-4">Excellent</span>
+  <span slot="slot-1">Awful</span>
+  <span slot="slot-2">Good</span>
+  <span slot="slot-3">Very Good</span>
+  <span slot="slot-5">Awesome</span>
+  <span slot="slot-4">Excellent</span>
 </review-rating>
 
 text provided within slot property will  be shown on each star icon when user hovers on it
@@ -40,6 +39,7 @@ selected by user and feedback text
 ````
 
 ### Styling
+```
 The following custom properties and mixins are available for styling:
 Custom property | Description | Default
 ----------------|-------------|----------
@@ -79,7 +79,13 @@ Custom property | Description | Default
   </head>
   <body>
     <div style="display:inline-block">
-        <review-rating id="notificationBanner"></review-rating>
+        <review-rating id="review">
+          <span slot="slot-1">Awful</span>
+          <span slot="slot-2">Good</span>
+          <span slot="slot-3">Very Good</span>
+          <span slot="slot-5">Awesome</span>
+          <span slot="slot-4">Excellent</span>
+        </review-rating>
     </div>
   </body>
 </html>
@@ -93,7 +99,13 @@ class SampleElement extends PolymerElement {
   static get template() {
     return html`
         <div style="display:inline-block">
-            <review-rating id="notificationBanner"></review-rating>
+            <review-rating id="review">
+              <span slot="slot-1">Awful</span>
+              <span slot="slot-2">Good</span>
+              <span slot="slot-3">Very Good</span>
+              <span slot="slot-5">Awesome</span>
+              <span slot="slot-4">Excellent</span>
+            </review-rating>
         </div>
     `;
   }
