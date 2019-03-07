@@ -1,0 +1,40 @@
+
+
+.main{
+  
+    width: 500px;
+   height: 500px;
+ }
+ .video{
+   width: 300px;
+   height: 300px;
+   position:relative;
+ }
+ .body{
+  position: relative; 
+  height:2000px;
+ 
+ }
+ .sample{
+ 
+  width: 300px;
+  height: 300px;
+   top: 200px;
+   right:0px;
+   position: fixed;
+ }
+ .title{
+   position:absolute;
+   top:190;
+   left:100;
+ }
+ 
+ /* @keyframes fade-in-up {
+ 0% {
+ opacity: 0;
+ }
+ 100% {
+ transform: translateY(0);
+ opacity: 1;
+ }
+ } */
