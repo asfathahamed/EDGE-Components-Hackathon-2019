@@ -2,16 +2,16 @@
   <div id="app">
     <div class="cmp">Subscription Timer Component</div>
     <SubscriptionTimer
-      startdt="2019-02-06T06:59Z"
-      expirydt="2018-03-06T10:23Z"
-      :showtimer="true"
-      prelabel="Your Subscription expires in"
-      postlabel="Your Subscription Expired"
-      agolabel="ago"
-      daylabel="day(s)"
-      hourlabel="hour(s)"
-      minlabel="min(s)"
-      seclabel="sec(s)"
+      start-date-utc="2019-02-06T06:59Z"
+      expiry-date-utc="2018-03-06T10:23Z"
+      show-timer="true"
+      before-expiry-label="Your Subscription expires in"
+      after-expiry-label="Your Subscription Expired"
+      after-expiry-additional-label="ago"
+      day-label="day(s)"
+      hour-label="hour(s)"
+      min-label="min(s)"
+      sec-label="sec(s)"
     ></SubscriptionTimer>
     <div class="cmp">Timeout component with no template.</div>
     <TimeOut :alert-inactivity-millis="5000" :post-inactivity-wait-till-millis="10000"></TimeOut>

@@ -1,0 +1,79 @@
+<meta charset="utf-8" />
+<title>Vue Web component demo</title>
+<script src="https://unpkg.com/vue"></script>
+<script src="./cmp.min.js"></script>
+<style>
+  p {
+    font-family: sans-serif;
+    border: 1px solid grey;
+    background-color: lightgray;
+  }
+</style>
+<p>
+  Subscription timer component is configured in such a way that it accepts Start
+  date and Expiry date in UTC format, based on the difference between the start
+  and expiry dates, timer is shown in two states <br /><br />
+  <i>1. Pre-Expiry (in UTC)</i> <br />
+  <i>2. Post-Expiry (in UTC)</i><br /><br />
+
+  User to provide appropriate labels to subscription timer component for
+  template to bind.<br /><br />
+
+  The component can be used as <br /><br />
+  <code>
+    &lt;cmp-subscriptiontimer start-date-utc="2019-02-06T06:59Z"
+    expiry-date-utc="2018-03-06T10:23Z" show-timer="true"
+    before-expiry-label="Your Subscription expires in" after-expiry-label="Your
+    Subscription Expired" after-expiry-additional-label="ago" day-label="day(s)"
+    hour-label="hour(s)" min-label="min(s)" sec-label="sec(s)"
+    &gt;&lt;/cmp-subscriptiontimer&gt;
+  </code>
+</p>
+<cmp-subscriptiontimer
+  start-date-utc="2019-02-06T06:59Z"
+  expiry-date-utc="2018-03-06T10:23Z"
+  show-timer="true"
+  before-expiry-label="Your Subscription expires in"
+  after-expiry-label="Your Subscription Expired"
+  after-expiry-additional-label="ago"
+  day-label="day(s)"
+  hour-label="hour(s)"
+  min-label="min(s)"
+  sec-label="sec(s)"
+></cmp-subscriptiontimer>
+
+<p>
+  Timeout component has no html template to display and is configured in such a
+  way that it accepts 2 properties <br />
+  1. alert inactivity (in milliseconds)<br />
+  2. post inactivity wait time (in milliseconds) <br /><br />
+  <b
+    >Alert inactivity prop is used to show the alert to user if inactivity is
+    detected on the web page for the mentioned time in milliseconds</b
+  ><br /><br />
+  <b
+    >Post inactivity wait time prop is used to wait for user action after the
+    alert is shown to the user.</b
+  ><br /><br />
+  <i
+    >1. If user clicks "ok" before the wait time, then he can still access the
+    page</i
+  ><br />
+  <i>2. If user clicks "cancel", then time out logic to be performed </i><br />
+  <i
+    >3. If user clicks "ok" after the wait time, then time out logic to be
+    performed</i
+  ><br /><br />
+  <b>(Please open the console to check the status of your page timeout)</b
+  ><br /><br />
+  The component can be used as <br />
+  <code>
+    &lt;cmp-timeout :alert-inactivity-millis="5000"
+    :post-inactivity-wait-till-millis="10000" &gt;&lt;/cmp-timeout&gt; </code
+  ><br /><br />
+</p>
+
+<cmp-timeout
+  :alert-inactivity-millis="5000"
+  :post-inactivity-wait-till-millis="10000"
+></cmp-timeout>

@@ -1,16 +1,16 @@
 <template>
-  <div class="timerContainer" v-if="showTimerComponent">
+  <div class="timerContainer" v-if="!hideTimerComponent">
     <div :class="timerclass">
-      <h5>{{timerLabel}}</h5>
+      <h3>{{timerLabel}}</h3>
       <span>{{ days }}</span>
-      <i>{{daylabel}}</i>
+      <i>{{dayLabel}}</i>
       <span>{{ hours }}</span>
-      <i>{{hourlabel}}</i>
+      <i>{{hourLabel}}</i>
       <span>{{ minutes }}</span>
-      <i>{{minlabel}}</i>
+      <i>{{minLabel}}</i>
       <span>{{ seconds }}</span>
-      <i>{{seclabel}}</i>
-      <span v-if="postExpiry">{{agolabel}}</span>
+      <i>{{secLabel}}</i>
+      <span v-if="postExpiry">{{afterExpiryAdditionalLabel}}</span>
     </div>
   </div>
 </template>
@@ -20,7 +20,7 @@
   display: inline-block;
 }
 
-.timer_pre_expiry h5 {
+.timer_pre_expiry h3 {
   color: green;
 }
 
@@ -36,7 +36,7 @@
   content: "\00a0";
 }
 
-.timer_post_expiry h5 {
+.timer_post_expiry h3 {
   color: red;
 }
 </style>
@@ -45,16 +45,16 @@
 import { validTimerProps } from "../util/commonutils.js";
 export default {
   props: {
-    startdt: String,
-    expirydt: String,
-    showtimer: Boolean,
-    prelabel: String,
-    postlabel: String,
-    agolabel: String,
-    daylabel: String,
-    hourlabel: String,
-    minlabel: String,
-    seclabel: String
+    startDateUtc: String,
+    expiryDateUtc: String,
+    showTimer: String,
+    beforeExpiryLabel: String,
+    afterExpiryLabel: String,
+    afterExpiryAdditionalLabel: String,
+    dayLabel: String,
+    hourLabel: String,
+    minLabel: String,
+    secLabel: String
   },
   data: function() {
     return {
@@ -62,15 +62,15 @@ export default {
       interval: null,
       preExpiry: false,
       postExpiry: false,
-      showTimerComponent: false
+      hideTimerComponent: true
     };
   },
   mounted() {
     this.$nextTick(function() {
       let isValidProps = validTimerProps(this.$props);
       if (!isValidProps) return;
-      if (!this.showtimer) return;
-      this.showTimerComponent = true;
+      if (!this.showTimer) return;
+      this.hideTimerComponent = false;
       this.startInterval();
     });
   },
@@ -83,9 +83,9 @@ export default {
     },
     timerLabel() {
       if (this.preExpiry) {
-        return this.prelabel;
-      } else if (this.postExpiry) {
-        return this.postlabel;
+        return this.beforeExpiryLabel;
+      } else {
+        return this.afterExpiryLabel;
       }
     },
     days() {
@@ -118,8 +118,8 @@ export default {
       }
     },
     startInterval() {
-      let start = new Date(this.startdt);
-      let end = new Date(this.expirydt);
+      let start = new Date(this.startDateUtc);
+      let end = new Date(this.expiryDateUtc);
       end.setSeconds(end.getSeconds() - 1);
       this.timerCount(start, end);
       // Start timer
