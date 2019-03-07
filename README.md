@@ -4,7 +4,7 @@
 The Theme Change component is useful for changing the theme of a page which is having the features like changing color,text-alignment,font-style and font-family of a page. 
 
 <p align="center">
-  <img width="800" height="400" src="" alt="Theme-change-component-Img">
+  <img width="800" height="400" src="Images/ThemeChangeComponentAfterApplyingTheme.PNG" alt="Theme-change-component-Img">
 </p>
 
  To preview demo of Theme Change component, [Click here]()
