@@ -1,0 +1,31 @@
+
+
+
+<body>
+    <div class="embed-responsive embed-responsive-4by3" class="main" scroll="200" #scroll>
+         <div class="embed-responsive-item" class=" video">
+            
+            <video class="frame" #videoPlayer controls="controls" (pause)="pause()" > 
+               <source src="{{src}}" type="video/mp4">
+               <source src="{{src}}" type="video/ogg">
+            </video> 
+          
+          <div  class="embed-responsive-item title" #title>
+            <div title="CustomTitle"></div>
+          </div>
+           
+            <div class="image" *ngIf="ShowPlayImage">
+                 <div class="dropup">
+                    <img src="../../assets/image.png"  alt="PlayImage" class="dropbtn" #image>
+         
+                      <div class="dropup-content">
+                        <a href="#" class="dropdown-item" (click)="play()" >Play</a>
+                        <a href="#" class="dropdown-item" (click)="openDialog()" id="modal">Modal</a>
+                      </div>
+                  </div>
+            </div>
+        </div>
+    </div>
+<body>
+      
+     

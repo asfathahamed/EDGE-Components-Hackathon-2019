@@ -1,0 +1,27 @@
+<h1 mat-dialog-title style="color:red; text-align: center" class="title">{{title}}</h1>
+<mat-dialog-actions>
+    <button  mat-dialog-close type="button" class="close" aria-label="Close" (click)="onNoClick()">
+        <span aria-hidden="true" style="color:red">&times;</span>
+    </button>
+</mat-dialog-actions>
+  
+<div class="embed-responsive embed-responsive-4by3 divs col-xs-12" class="main">
+
+  <div class="embed-responsive embed-responsive-4by3">
+
+     <div class="embed-responsive-item" class=" video" >
+        <mat-dialog-content>
+          <video controls class="frame" autoplay controlsList="nofullscreen">
+            <source src="{{src}}" type="video/mp4">
+            <source src="{{src}}" type="video/ogg">
+
+          </video>
+      </mat-dialog-content> 
+      </div>
+   </div>
+
+</div>
+
+
+
+
