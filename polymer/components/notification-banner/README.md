@@ -1,6 +1,6 @@
 # \<notification-banner\>
 
-a customized notification banner in Polymer 3.0
+a customized notification banner component in Polymer 3.0
 
 ## Install the Polymer-CLI
 
@@ -15,7 +15,7 @@ $ polymer serve
 ## Running Tests
 
 ```
-http://127.0.0.1:8081/components/notification-banner/test/
+http://127.0.0.1:8081/notification-banner/test/
 ```
 
 ## Basic info about notification component
@@ -24,6 +24,7 @@ to the user in the form of toast
 Example:
 `````
 as notification
+
 <notification-banner 
   type="success|error|warning|info|custom" 
   text="message to be shown to user"
@@ -32,8 +33,9 @@ as notification
 </notification-banner>
 
 
-```````
+`````
 as toast
+
 <notification-banner 
   toast
   text="message to be shown to user"
@@ -41,7 +43,7 @@ as toast
   toast-timeout="time in miliseconds toast need to be visible"
   toast-position="top-left|top-right|bottom-right|bottom-left"
 ></notification-banner>
-```````
+`````
 
 ### Styling
 The following custom properties and mixins are available for styling:
@@ -68,7 +70,7 @@ Custom property | Description | Default
 @element notification banner
 @demo demo/index.html
 
-
+### Integration to application
 ### In an html file
 ```html
 <html>
