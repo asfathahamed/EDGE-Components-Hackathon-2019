@@ -1,11 +1,14 @@
 ## EDGE-Components-Hackathon-2019
 
-### VideoMedia Component using  AngularMaterial
+# VideoMedia Component using  AngularMaterial
 
 
-![alt text](https://github.com/ERS-HCL/EDGE-Components-Hackathon-2019/blob/ERSEDGE022019011/Images/video.png)
-![alt text](https://github.com/ERS-HCL/EDGE-Components-Hackathon-2019/blob/ERSEDGE022019011/Images/modal.png)
-![alt text](https://github.com/ERS-HCL/EDGE-Components-Hackathon-2019/blob/ERSEDGE022019011/Images/scroll.png)
+<p align="center">
+  <img src="https://github.com/ERS-HCL/EDGE-Components-Hackathon-2019/blob/ERSEDGE022019011/Images/video.png" width="750" title="hover text"><br><br>
+  <img src="https://github.com/ERS-HCL/EDGE-Components-Hackathon-2019/blob/ERSEDGE022019011/Images/scroll.png" width="750" alt="scroll image"><br><br>
+    <img src="https://github.com/ERS-HCL/EDGE-Components-Hackathon-2019/blob/ERSEDGE022019011/Images/modal.png" width="750" alt="modal">
+</p>
+
 
 
 To preview demo of VideomediaComponent, [Click Here](https://angular-2h4j53.stackblitz.io).
