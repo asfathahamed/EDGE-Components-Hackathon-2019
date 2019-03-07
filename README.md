@@ -6,7 +6,8 @@ if user scroll the webpage video also scroll as per user requirement.
 ## Output Format for Desktop view
 <p align='center'><img src="./timeout-desktop.PNG"></p>
 
-
+## Output Format for Mobile view
+<p align='center'><img src="./timeout-mobile.PNG"></p>  
 
 
 To preview demo of Time Out Component [click here](https://stackblitz.com/edit/angular-egsoov?file=src%2Fapp%2Fapp.component.html)
