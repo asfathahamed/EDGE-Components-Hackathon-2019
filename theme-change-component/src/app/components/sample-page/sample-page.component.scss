@@ -1,0 +1,47 @@
+@import '../theme-picker/theme';
+@import '../theme-picker/functions';
+
+.header {
+
+ box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+ margin-bottom:10px;
+   background-color: var(--themeColor);
+}
+.tabsTitle{
+ 
+  font-style: var(--themeFontStyle); 
+  font-family:var(--themeFontFamily);
+   color: var(--themeColor);
+}
+.tabsContent{
+  margin:1% 5% 1% 2%;
+ 
+  text-align:var(--themeTextAlignment);  
+  font-style: var(--themeFontStyle); 
+  font-family:var(--themeFontFamily);
+   color: var(--themeColor);
+}
+img{
+  margin:0px;
+}
+
+.footer {  
+   box-shadow: -0 -5px 8px 0 rgba(0, 0, 0, 0.2), -0 -6px 20px 0 rgba(0, 0, 0, 0.19);
+ margin-bottom:10px;
+  text-align:center;
+  font-style: var(--themeFontStyle); 
+  font-family:var(--themeFontFamily);
+    background-color: var(--themeColor);
+    font-size:12px;
+    padding:3px;
+}
+.buttonDiv{
+  text-align:center;
+  margin-bottom:10px;
+}
+button{
+           border-radius: 20px;              
+            cursor:pointer; 
+            background-color: var(--themeColor);  
+            font-style: var(--themeFontStyle);       
+        }
