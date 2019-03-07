@@ -51,7 +51,7 @@ export class WriteReviewComponent implements OnInit {
     this.reviewForm = this.fb.group({
       reviewTitle:['', [Validators.required, Validators.minLength(3), Validators.maxLength(25)]],
       review:['', [Validators.required, Validators.minLength(3), Validators.maxLength(500)]],
-      recommendation: ['true'],
+      recommendation: [1],
       name: ['', [Validators.required, Validators.maxLength(25)]],
       email: ['', [Validators.required, Validators.email]],
       gender: ['true']
@@ -77,7 +77,9 @@ export class WriteReviewComponent implements OnInit {
 			"name": this.reviewForm.value.name,
       "email": this.reviewForm.value.email,
       "gender": this.userGender,
-      "timeOfPost": this.timeOfPost
+      "timeOfPost": this.timeOfPost,
+      "like": 0,
+			"dislike": 0
     }
     console.log(payload)
     this.GetDataService.funcPostReview(this.getIndex, payload)    

@@ -23,6 +23,7 @@
       <div class='starRating rating{{review.rating}}'></div>
       <h4>{{review.title}}</h4>
       <p>{{review.message}}</p>
+      <p>{{ review.recommendation }}</p>
       <p *ngIf='review.recommendation ==  1'>I would like to recommend it to my friends.</p>
       
       <p class='userDetails'>
@@ -31,10 +32,10 @@
       </p>
       <div class="review-favor"> 
         <div class="like">
-          <i (click)='likeReview(i)'></i><span>({{review.like}})</span>
+          <i (click)='likeReview(i)'></i><span *ngIf='review.like > 0'>({{review.like}})</span>
         </div>
         <div class="dislike">
-          <i (click)='dislikeReview(i)'></i><span>({{review.dislike}})</span> 
+          <i (click)='dislikeReview(i)'></i><span *ngIf='review.dislike > 0'>({{review.dislike}})</span> 
         </div>
       </div>
     </div>
