@@ -1,0 +1,49 @@
+<div class="container-fluid txt-header">
+  <div class="row header">
+    <div class="col-md-1 col-sm-3 mapsHeader">
+      <h1 class="title"> Maps </h1>
+    </div>
+    <div class="col-md-11 col-sm-9">
+      <div class="row" class="locationPos">
+        <div class="col-sm-2 col-md-3 htValue">
+              <div  class="custom-select" style="width: 52%;">
+                  <select  name='options' [ngModel]="selectedType" (ngModelChange)="typeChange($event)">
+                      <option selected value='location'>Location</option>
+                      <option value='direction'>Direction</option>
+                  </select>
+              </div>
+        </div>
+        <div class="col-sm-2 col-md-3 htValue">
+            <input id="fromLocation" class="test input-align" maxlength="100" placeholder="Search location">
+        </div>
+        <div class="col-sm-2 col-md-3 htValue" [hidden]="selectedType=== 'direction' || !isPopularPlace">
+            <div  class="custom-select" style="width: 52%;">
+          <select  name='options' [(ngModel)]="placeType">
+            <option  value='atm'>ATM</option>
+            <option value='doctor'>Doctor</option>
+            <option value='school'>School</option>
+            <option value='stadium'>Stadium</option>
+            <option value='train_station'>Train Station</option>
+            <option selected value='hospital'>Hospital</option>
+        </select>
+        </div>
+      </div>
+        <div class="col-sm-2 col-md-3 htValue" [hidden]="selectedType!== 'direction'">
+            <input id="toLocation" class="test input-align"  maxlength="100" placeholder="Enter destination">
+        </div>
+        <div class="col-sm-2 col-md-3 htValue">
+            <button type="button" class="btn btnStyle" (click)="getLocation()">{{btnText}}</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-sm-12 mapLoadPos">
+      <div id="map_container">
+        <div id="map">
+          <app-map-component [location]="placeText" [isPopularPlace]="isPopularPlace" [placeType]="placeType" [type]="selectedType" [toLocation]='toLocation'></app-map-component>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,10 @@
+<div id="map-info"></div>
+<div id="right-panel" *ngIf="showPlace && isPopularPlace">
+    <h2 style="color:aqua">{{search}}</h2>
+    <ul id="places">
+    </ul>
+    <button id="more" type="button" class="btn btnStyle">More results</button>
+  </div>
+<div class="overlay loader" *ngIf="showLoader" layout layout-align="center">
+    <div class="spinner icon-ic_n_others_loading"></div>
+</div>
