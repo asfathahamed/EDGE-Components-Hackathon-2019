@@ -1,7 +1,1319 @@
 <meta charset="utf-8" />
 <title>Vue Web component demo</title>
 <script src="https://unpkg.com/vue"></script>
-<script src="./cmp.min.js"></script>
+<script>
+  (function(t) {
+    var e = {};
+    function n(r) {
+      if (e[r]) return e[r].exports;
+      var o = (e[r] = { i: r, l: !1, exports: {} });
+      return t[r].call(o.exports, o, o.exports, n), (o.l = !0), o.exports;
+    }
+    (n.m = t),
+      (n.c = e),
+      (n.d = function(t, e, r) {
+        n.o(t, e) || Object.defineProperty(t, e, { enumerable: !0, get: r });
+      }),
+      (n.r = function(t) {
+        "undefined" !== typeof Symbol &&
+          Symbol.toStringTag &&
+          Object.defineProperty(t, Symbol.toStringTag, { value: "Module" }),
+          Object.defineProperty(t, "__esModule", { value: !0 });
+      }),
+      (n.t = function(t, e) {
+        if ((1 & e && (t = n(t)), 8 & e)) return t;
+        if (4 & e && "object" === typeof t && t && t.__esModule) return t;
+        var r = Object.create(null);
+        if (
+          (n.r(r),
+          Object.defineProperty(r, "default", { enumerable: !0, value: t }),
+          2 & e && "string" != typeof t)
+        )
+          for (var o in t)
+            n.d(
+              r,
+              o,
+              function(e) {
+                return t[e];
+              }.bind(null, o)
+            );
+        return r;
+      }),
+      (n.n = function(t) {
+        var e =
+          t && t.__esModule
+            ? function() {
+                return t["default"];
+              }
+            : function() {
+                return t;
+              };
+        return n.d(e, "a", e), e;
+      }),
+      (n.o = function(t, e) {
+        return Object.prototype.hasOwnProperty.call(t, e);
+      }),
+      (n.p = ""),
+      n((n.s = "5a74"));
+  })({
+    "01f9": function(t, e, n) {
+      "use strict";
+      var r = n("2d00"),
+        o = n("5ca1"),
+        i = n("2aba"),
+        s = n("32e9"),
+        c = n("84f2"),
+        a = n("41a0"),
+        u = n("7f20"),
+        f = n("38fd"),
+        l = n("2b4c")("iterator"),
+        p = !([].keys && "next" in [].keys()),
+        d = "@@iterator",
+        h = "keys",
+        v = "values",
+        b = function() {
+          return this;
+        };
+      t.exports = function(t, e, n, m, y, _, x) {
+        a(n, e, m);
+        var g,
+          w,
+          S,
+          L = function(t) {
+            if (!p && t in O) return O[t];
+            switch (t) {
+              case h:
+                return function() {
+                  return new n(this, t);
+                };
+              case v:
+                return function() {
+                  return new n(this, t);
+                };
+            }
+            return function() {
+              return new n(this, t);
+            };
+          },
+          E = e + " Iterator",
+          T = y == v,
+          C = !1,
+          O = t.prototype,
+          j = O[l] || O[d] || (y && O[y]),
+          M = j || L(y),
+          k = y ? (T ? L("entries") : M) : void 0,
+          P = ("Array" == e && O.entries) || j;
+        if (
+          (P &&
+            ((S = f(P.call(new t()))),
+            S !== Object.prototype &&
+              S.next &&
+              (u(S, E, !0), r || "function" == typeof S[l] || s(S, l, b))),
+          T &&
+            j &&
+            j.name !== v &&
+            ((C = !0),
+            (M = function() {
+              return j.call(this);
+            })),
+          (r && !x) || (!p && !C && O[l]) || s(O, l, M),
+          (c[e] = M),
+          (c[E] = b),
+          y)
+        )
+          if (
+            ((g = { values: T ? M : L(v), keys: _ ? M : L(h), entries: k }), x)
+          )
+            for (w in g) w in O || i(O, w, g[w]);
+          else o(o.P + o.F * (p || C), e, g);
+        return g;
+      };
+    },
+    "0d58": function(t, e, n) {
+      var r = n("ce10"),
+        o = n("e11e");
+      t.exports =
+        Object.keys ||
+        function(t) {
+          return r(t, o);
+        };
+    },
+    1495: function(t, e, n) {
+      var r = n("86cc"),
+        o = n("cb7c"),
+        i = n("0d58");
+      t.exports = n("9e1e")
+        ? Object.defineProperties
+        : function(t, e) {
+            o(t);
+            var n,
+              s = i(e),
+              c = s.length,
+              a = 0;
+            while (c > a) r.f(t, (n = s[a++]), e[n]);
+            return t;
+          };
+    },
+    "230e": function(t, e, n) {
+      var r = n("d3f4"),
+        o = n("7726").document,
+        i = r(o) && r(o.createElement);
+      t.exports = function(t) {
+        return i ? o.createElement(t) : {};
+      };
+    },
+    2350: function(t, e) {
+      function n(t, e) {
+        var n = t[1] || "",
+          o = t[3];
+        if (!o) return n;
+        if (e && "function" === typeof btoa) {
+          var i = r(o),
+            s = o.sources.map(function(t) {
+              return "/*# sourceURL=" + o.sourceRoot + t + " */";
+            });
+          return [n]
+            .concat(s)
+            .concat([i])
+            .join("\n");
+        }
+        return [n].join("\n");
+      }
+      function r(t) {
+        var e = btoa(unescape(encodeURIComponent(JSON.stringify(t)))),
+          n =
+            "sourceMappingURL=data:application/json;charset=utf-8;base64," + e;
+        return "/*# " + n + " */";
+      }
+      t.exports = function(t) {
+        var e = [];
+        return (
+          (e.toString = function() {
+            return this.map(function(e) {
+              var r = n(e, t);
+              return e[2] ? "@media " + e[2] + "{" + r + "}" : r;
+            }).join("");
+          }),
+          (e.i = function(t, n) {
+            "string" === typeof t && (t = [[null, t, ""]]);
+            for (var r = {}, o = 0; o < this.length; o++) {
+              var i = this[o][0];
+              "number" === typeof i && (r[i] = !0);
+            }
+            for (o = 0; o < t.length; o++) {
+              var s = t[o];
+              ("number" === typeof s[0] && r[s[0]]) ||
+                (n && !s[2]
+                  ? (s[2] = n)
+                  : n && (s[2] = "(" + s[2] + ") and (" + n + ")"),
+                e.push(s));
+            }
+          }),
+          e
+        );
+      };
+    },
+    "2aba": function(t, e, n) {
+      var r = n("7726"),
+        o = n("32e9"),
+        i = n("69a8"),
+        s = n("ca5a")("src"),
+        c = n("fa5b"),
+        a = "toString",
+        u = ("" + c).split(a);
+      (n("8378").inspectSource = function(t) {
+        return c.call(t);
+      }),
+        (t.exports = function(t, e, n, c) {
+          var a = "function" == typeof n;
+          a && (i(n, "name") || o(n, "name", e)),
+            t[e] !== n &&
+              (a && (i(n, s) || o(n, s, t[e] ? "" + t[e] : u.join(String(e)))),
+              t === r
+                ? (t[e] = n)
+                : c
+                ? t[e]
+                  ? (t[e] = n)
+                  : o(t, e, n)
+                : (delete t[e], o(t, e, n)));
+        })(Function.prototype, a, function() {
+          return ("function" == typeof this && this[s]) || c.call(this);
+        });
+    },
+    "2aeb": function(t, e, n) {
+      var r = n("cb7c"),
+        o = n("1495"),
+        i = n("e11e"),
+        s = n("613b")("IE_PROTO"),
+        c = function() {},
+        a = "prototype",
+        u = function() {
+          var t,
+            e = n("230e")("iframe"),
+            r = i.length,
+            o = "<",
+            s = ">";
+          (e.style.display = "none"),
+            n("fab2").appendChild(e),
+            (e.src = "javascript:"),
+            (t = e.contentWindow.document),
+            t.open(),
+            t.write(o + "script" + s + "document.F=Object" + o + "/script" + s),
+            t.close(),
+            (u = t.F);
+          while (r--) delete u[a][i[r]];
+          return u();
+        };
+      t.exports =
+        Object.create ||
+        function(t, e) {
+          var n;
+          return (
+            null !== t
+              ? ((c[a] = r(t)), (n = new c()), (c[a] = null), (n[s] = t))
+              : (n = u()),
+            void 0 === e ? n : o(n, e)
+          );
+        };
+    },
+    "2b4c": function(t, e, n) {
+      var r = n("5537")("wks"),
+        o = n("ca5a"),
+        i = n("7726").Symbol,
+        s = "function" == typeof i,
+        c = (t.exports = function(t) {
+          return r[t] || (r[t] = (s && i[t]) || (s ? i : o)("Symbol." + t));
+        });
+      c.store = r;
+    },
+    "2d00": function(t, e) {
+      t.exports = !1;
+    },
+    "2d95": function(t, e) {
+      var n = {}.toString;
+      t.exports = function(t) {
+        return n.call(t).slice(8, -1);
+      };
+    },
+    "32e9": function(t, e, n) {
+      var r = n("86cc"),
+        o = n("4630");
+      t.exports = n("9e1e")
+        ? function(t, e, n) {
+            return r.f(t, e, o(1, n));
+          }
+        : function(t, e, n) {
+            return (t[e] = n), t;
+          };
+    },
+    "35d6": function(t, e, n) {
+      "use strict";
+      function r(t, e) {
+        for (var n = [], r = {}, o = 0; o < e.length; o++) {
+          var i = e[o],
+            s = i[0],
+            c = i[1],
+            a = i[2],
+            u = i[3],
+            f = { id: t + ":" + o, css: c, media: a, sourceMap: u };
+          r[s] ? r[s].parts.push(f) : n.push((r[s] = { id: s, parts: [f] }));
+        }
+        return n;
+      }
+      function o(t, e, n) {
+        var o = r(t, e);
+        i(o, n);
+      }
+      function i(t, e) {
+        const n = e._injectedStyles || (e._injectedStyles = {});
+        for (var r = 0; r < t.length; r++) {
+          var o = t[r],
+            i = n[o.id];
+          if (!i) {
+            for (var s = 0; s < o.parts.length; s++) c(o.parts[s], e);
+            n[o.id] = !0;
+          }
+        }
+      }
+      function s(t) {
+        var e = document.createElement("style");
+        return (e.type = "text/css"), t.appendChild(e), e;
+      }
+      function c(t, e) {
+        var n = s(e),
+          r = t.css,
+          o = t.media,
+          i = t.sourceMap;
+        if (
+          (o && n.setAttribute("media", o),
+          i &&
+            ((r += "\n/*# sourceURL=" + i.sources[0] + " */"),
+            (r +=
+              "\n/*# sourceMappingURL=data:application/json;base64," +
+              btoa(unescape(encodeURIComponent(JSON.stringify(i)))) +
+              " */")),
+          n.styleSheet)
+        )
+          n.styleSheet.cssText = r;
+        else {
+          while (n.firstChild) n.removeChild(n.firstChild);
+          n.appendChild(document.createTextNode(r));
+        }
+      }
+      n.r(e),
+        n.d(e, "default", function() {
+          return o;
+        });
+    },
+    "38fd": function(t, e, n) {
+      var r = n("69a8"),
+        o = n("4bf8"),
+        i = n("613b")("IE_PROTO"),
+        s = Object.prototype;
+      t.exports =
+        Object.getPrototypeOf ||
+        function(t) {
+          return (
+            (t = o(t)),
+            r(t, i)
+              ? t[i]
+              : "function" == typeof t.constructor && t instanceof t.constructor
+              ? t.constructor.prototype
+              : t instanceof Object
+              ? s
+              : null
+          );
+        };
+    },
+    "39b0": function(t, e, n) {
+      var r = n("d54c");
+      "string" === typeof r && (r = [[t.i, r, ""]]),
+        r.locals && (t.exports = r.locals);
+      var o = n("35d6").default;
+      t.exports.__inject__ = function(t) {
+        o("f79ef04e", r, t);
+      };
+    },
+    "41a0": function(t, e, n) {
+      "use strict";
+      var r = n("2aeb"),
+        o = n("4630"),
+        i = n("7f20"),
+        s = {};
+      n("32e9")(s, n("2b4c")("iterator"), function() {
+        return this;
+      }),
+        (t.exports = function(t, e, n) {
+          (t.prototype = r(s, { next: o(1, n) })), i(t, e + " Iterator");
+        });
+    },
+    4588: function(t, e) {
+      var n = Math.ceil,
+        r = Math.floor;
+      t.exports = function(t) {
+        return isNaN((t = +t)) ? 0 : (t > 0 ? r : n)(t);
+      };
+    },
+    4630: function(t, e) {
+      t.exports = function(t, e) {
+        return {
+          enumerable: !(1 & t),
+          configurable: !(2 & t),
+          writable: !(4 & t),
+          value: e
+        };
+      };
+    },
+    "4bf8": function(t, e, n) {
+      var r = n("be13");
+      t.exports = function(t) {
+        return Object(r(t));
+      };
+    },
+    "4e34": function(t, e, n) {
+      "use strict";
+      n.r(e);
+      var r = n("39b0"),
+        o = n.n(r);
+      for (var i in r)
+        "default" !== i &&
+          (function(t) {
+            n.d(e, t, function() {
+              return r[t];
+            });
+          })(i);
+      e["default"] = o.a;
+    },
+    5537: function(t, e, n) {
+      var r = n("8378"),
+        o = n("7726"),
+        i = "__core-js_shared__",
+        s = o[i] || (o[i] = {});
+      (t.exports = function(t, e) {
+        return s[t] || (s[t] = void 0 !== e ? e : {});
+      })("versions", []).push({
+        version: r.version,
+        mode: n("2d00") ? "pure" : "global",
+        copyright: "© 2019 Denis Pushkarev (zloirock.ru)"
+      });
+    },
+    "5a74": function(t, e, n) {
+      "use strict";
+      var r;
+      (n.r(e), "undefined" !== typeof window) &&
+        ((r = window.document.currentScript) &&
+          (r = r.src.match(/(.+\/)[^\/]+\.js(\?.*)?$/)) &&
+          (n.p = r[1]));
+      var o = n("8bbf"),
+        i = n.n(o);
+      const s = /-(\w)/g,
+        c = t => {
+          return t.replace(s, (t, e) => (e ? e.toUpperCase() : ""));
+        },
+        a = /\B([A-Z])/g,
+        u = t => {
+          return t.replace(a, "-$1").toLowerCase();
+        };
+      function f(t) {
+        const e = {};
+        return (
+          t.forEach(t => {
+            e[t] = void 0;
+          }),
+          e
+        );
+      }
+      function l(t, e, n) {
+        (t[e] = [].concat(t[e] || [])), t[e].unshift(n);
+      }
+      function p(t, e) {
+        if (t) {
+          const n = t.$options[e] || [];
+          n.forEach(e => {
+            e.call(t);
+          });
+        }
+      }
+      function d(t, e) {
+        return new CustomEvent(t, { bubbles: !1, cancelable: !1, detail: e });
+      }
+      const h = t => /function Boolean/.test(String(t)),
+        v = t => /function Number/.test(String(t));
+      function b(t, e, { type: n } = {}) {
+        if (h(n))
+          return "true" === t || "false" === t
+            ? "true" === t
+            : "" === t || t === e || null != t;
+        if (v(n)) {
+          const e = parseFloat(t, 10);
+          return isNaN(e) ? t : e;
+        }
+        return t;
+      }
+      function m(t, e) {
+        const n = [];
+        for (let r = 0, o = e.length; r < o; r++) n.push(y(t, e[r]));
+        return n;
+      }
+      function y(t, e) {
+        if (3 === e.nodeType) return e.data.trim() ? e.data : null;
+        if (1 === e.nodeType) {
+          const n = { attrs: _(e), domProps: { innerHTML: e.innerHTML } };
+          return (
+            n.attrs.slot && ((n.slot = n.attrs.slot), delete n.attrs.slot),
+            t(e.tagName, n)
+          );
+        }
+        return null;
+      }
+      function _(t) {
+        const e = {};
+        for (let n = 0, r = t.attributes.length; n < r; n++) {
+          const r = t.attributes[n];
+          e[r.nodeName] = r.nodeValue;
+        }
+        return e;
+      }
+      function x(t, e) {
+        const n = "function" === typeof e && !e.cid;
+        let r,
+          o,
+          i,
+          s = !1;
+        function a(t) {
+          if (s) return;
+          const e = "function" === typeof t ? t.options : t,
+            n = Array.isArray(e.props) ? e.props : Object.keys(e.props || {});
+          (r = n.map(u)), (o = n.map(c));
+          const a = Array.isArray(e.props) ? {} : e.props || {};
+          (i = o.reduce((t, e, r) => {
+            return (t[e] = a[n[r]]), t;
+          }, {})),
+            l(e, "beforeCreate", function() {
+              const t = this.$emit;
+              this.$emit = (e, ...n) => {
+                return (
+                  this.$root.$options.customElement.dispatchEvent(d(e, n)),
+                  t.call(this, e, ...n)
+                );
+              };
+            }),
+            l(e, "created", function() {
+              o.forEach(t => {
+                this.$root.props[t] = this[t];
+              });
+            }),
+            o.forEach(t => {
+              Object.defineProperty(v.prototype, t, {
+                get() {
+                  return this._wrapper.props[t];
+                },
+                set(e) {
+                  this._wrapper.props[t] = e;
+                },
+                enumerable: !1,
+                configurable: !0
+              });
+            }),
+            (s = !0);
+        }
+        function h(t, e) {
+          const n = c(e),
+            r = t.hasAttribute(e) ? t.getAttribute(e) : void 0;
+          t._wrapper.props[n] = b(r, e, i[n]);
+        }
+        class v extends HTMLElement {
+          constructor() {
+            super(), this.attachShadow({ mode: "open" });
+            const n = (this._wrapper = new t({
+                name: "shadow-root",
+                customElement: this,
+                shadowRoot: this.shadowRoot,
+                data() {
+                  return { props: {}, slotChildren: [] };
+                },
+                render(t) {
+                  return t(
+                    e,
+                    { ref: "inner", props: this.props },
+                    this.slotChildren
+                  );
+                }
+              })),
+              r = new MutationObserver(t => {
+                let e = !1;
+                for (let n = 0; n < t.length; n++) {
+                  const r = t[n];
+                  s && "attributes" === r.type && r.target === this
+                    ? h(this, r.attributeName)
+                    : (e = !0);
+                }
+                e &&
+                  (n.slotChildren = Object.freeze(
+                    m(n.$createElement, this.childNodes)
+                  ));
+              });
+            r.observe(this, {
+              childList: !0,
+              subtree: !0,
+              characterData: !0,
+              attributes: !0
+            });
+          }
+          get vueComponent() {
+            return this._wrapper.$refs.inner;
+          }
+          connectedCallback() {
+            const t = this._wrapper;
+            if (t._isMounted) p(this.vueComponent, "activated");
+            else {
+              const n = () => {
+                (t.props = f(o)),
+                  r.forEach(t => {
+                    h(this, t);
+                  });
+              };
+              s
+                ? n()
+                : e().then(t => {
+                    (t.__esModule || "Module" === t[Symbol.toStringTag]) &&
+                      (t = t.default),
+                      a(t),
+                      n();
+                  }),
+                (t.slotChildren = Object.freeze(
+                  m(t.$createElement, this.childNodes)
+                )),
+                t.$mount(),
+                this.shadowRoot.appendChild(t.$el);
+            }
+          }
+          disconnectedCallback() {
+            p(this.vueComponent, "deactivated");
+          }
+        }
+        return n || a(e), v;
+      }
+      var g = x;
+      n("2350"), n("35d6");
+      function w(t, e, n, r, o, i, s, c) {
+        var a,
+          u = "function" === typeof t ? t.options : t;
+        if (
+          (e && ((u.render = e), (u.staticRenderFns = n), (u._compiled = !0)),
+          r && (u.functional = !0),
+          i && (u._scopeId = "data-v-" + i),
+          s
+            ? ((a = function(t) {
+                (t =
+                  t ||
+                  (this.$vnode && this.$vnode.ssrContext) ||
+                  (this.parent &&
+                    this.parent.$vnode &&
+                    this.parent.$vnode.ssrContext)),
+                  t ||
+                    "undefined" === typeof __VUE_SSR_CONTEXT__ ||
+                    (t = __VUE_SSR_CONTEXT__),
+                  o && o.call(this, t),
+                  t &&
+                    t._registeredComponents &&
+                    t._registeredComponents.add(s);
+              }),
+              (u._ssrRegister = a))
+            : o &&
+              (a = c
+                ? function() {
+                    o.call(this, this.$root.$options.shadowRoot);
+                  }
+                : o),
+          a)
+        )
+          if (u.functional) {
+            u._injectStyles = a;
+            var f = u.render;
+            u.render = function(t, e) {
+              return a.call(e), f(t, e);
+            };
+          } else {
+            var l = u.beforeCreate;
+            u.beforeCreate = l ? [].concat(l, a) : [a];
+          }
+        return { exports: t, options: u };
+      }
+      var S = function() {
+          var t = this,
+            e = t.$createElement,
+            n = t._self._c || e;
+          return t.hideTimerComponent
+            ? t._e()
+            : n("div", { staticClass: "timerContainer" }, [
+                n("div", { class: t.timerclass }, [
+                  n("h3", [t._v(t._s(t.timerLabel))]),
+                  n("span", [t._v(t._s(t.days))]),
+                  n("i", [t._v(t._s(t.dayLabel))]),
+                  n("span", [t._v(t._s(t.hours))]),
+                  n("i", [t._v(t._s(t.hourLabel))]),
+                  n("span", [t._v(t._s(t.minutes))]),
+                  n("i", [t._v(t._s(t.minLabel))]),
+                  n("span", [t._v(t._s(t.seconds))]),
+                  n("i", [t._v(t._s(t.secLabel))]),
+                  t.postExpiry
+                    ? n("span", [t._v(t._s(t.afterExpiryAdditionalLabel))])
+                    : t._e()
+                ])
+              ]);
+        },
+        L = [],
+        E = (n("ac6a"),
+        [
+          "click",
+          "mouseenter",
+          "mousewheel",
+          "touchmove",
+          "mousedown",
+          "mousemove",
+          "keypress",
+          "scroll",
+          "touchstart"
+        ]);
+      function T(t) {
+        return !t || "string" != typeof t || "" == t;
+      }
+      function C(t) {
+        return !(
+          T(t.dayLabel) ||
+          T(t.hourLabel) ||
+          T(t.minLabel) ||
+          T(t.secLabel) ||
+          T(t.startDateUtc) ||
+          T(t.expiryDateUtc) ||
+          T(t.beforeExpiryLabel) ||
+          T(t.afterExpiryLabel) ||
+          T(t.afterExpiryAdditionalLabel) ||
+          T(t.showTimer) ||
+          ("true" != t.showTimer && "false" != t.showTimer)
+        );
+      }
+      function O(t) {
+        var e = t % 1e3;
+        t = (t - e) / 1e3;
+        var n = t % 60;
+        t = (t - n) / 60;
+        var r = t % 60,
+          o = (t - r) / 60;
+        return o + " Hrs :" + r + " mins :" + n + " secs ";
+      }
+      function j(t, e) {
+        var n;
+        function r() {
+          var t = E;
+          t.forEach(function(t) {
+            window.addEventListener(t, a, !0);
+          }),
+            a();
+        }
+        function o() {
+          var t = E;
+          t.forEach(function(t) {
+            window.removeEventListener(t, a, !0);
+          });
+        }
+        function i() {
+          var n = new Date().setMilliseconds(new Date().getMilliseconds() + e);
+          window.confirm(
+            "The webpage is idle for " +
+              O(t) +
+              " web page will be active till " +
+              new Date(n) +
+              " Are you willing to stay on the page?"
+          )
+            ? new Date() < n
+              ? (console.log(
+                  "Timer has been reset as the user clicked 'ok' with in the accepted time range"
+                ),
+                a())
+              : (console.log(
+                  "User clicked 'ok' after the time range so timer is cleared."
+                ),
+                s())
+            : s();
+        }
+        function s() {
+          c(),
+            o(),
+            console.log("Web page timed out! Do the business logic here!");
+        }
+        function c() {
+          clearTimeout(n);
+        }
+        function a() {
+          c(), (n = setTimeout(i, t));
+        }
+        (window.onunload = o), r();
+      }
+      var M = {
+          props: {
+            startDateUtc: String,
+            expiryDateUtc: String,
+            showTimer: String,
+            beforeExpiryLabel: String,
+            afterExpiryLabel: String,
+            afterExpiryAdditionalLabel: String,
+            dayLabel: String,
+            hourLabel: String,
+            minLabel: String,
+            secLabel: String
+          },
+          data: function() {
+            return {
+              timeDiff: 0,
+              interval: null,
+              preExpiry: !1,
+              postExpiry: !1,
+              hideTimerComponent: !0
+            };
+          },
+          mounted() {
+            this.$nextTick(function() {
+              var t = C(this.$props);
+              t &&
+                this.showTimer &&
+                ((this.hideTimerComponent = !1), this.startInterval());
+            });
+          },
+          computed: {
+            timerclass() {
+              return {
+                timer_pre_expiry: this.preExpiry,
+                timer_post_expiry: this.postExpiry
+              };
+            },
+            timerLabel() {
+              return this.preExpiry
+                ? this.beforeExpiryLabel
+                : this.afterExpiryLabel;
+            },
+            days() {
+              return Math.floor(this.timeDiff / 864e5);
+            },
+            hours() {
+              return Math.floor((this.timeDiff % 864e5) / 36e5);
+            },
+            minutes() {
+              return Math.floor((this.timeDiff % 36e5) / 6e4);
+            },
+            seconds() {
+              return Math.floor((this.timeDiff % 6e4) / 1e3);
+            }
+          },
+          methods: {
+            timerCount(t, e) {
+              var n = e - t;
+              (this.timeDiff = n < 0 ? Math.abs(n) : n),
+                n < 0
+                  ? ((this.postExpiry = !0), (this.preExpiry = !1))
+                  : ((this.postExpiry = !1), (this.preExpiry = !0));
+            },
+            startInterval() {
+              var t = new Date(this.startDateUtc),
+                e = new Date(this.expiryDateUtc);
+              e.setSeconds(e.getSeconds() - 1),
+                this.timerCount(t, e),
+                (this.interval = setInterval(() => {
+                  e.setSeconds(e.getSeconds() - 1), this.timerCount(t, e);
+                }, 1e3));
+            }
+          },
+          beforeDestroy() {
+            clearInterval(this.interval), (this.interval = null);
+          }
+        },
+        k = M;
+      function P(t) {
+        var e = n("4e34");
+        e.__inject__ && e.__inject__(t);
+      }
+      var D = w(k, S, L, !1, P, null, null, !0),
+        A = D.exports,
+        $ = function() {
+          var t = this,
+            e = t.$createElement,
+            n = t._self._c || e;
+          return n("div");
+        },
+        R = [],
+        N = {
+          props: {
+            alertInactivityMillis: Number,
+            postInactivityWaitTillMillis: Number
+          },
+          mounted() {
+            this.$nextTick(function() {
+              j(5e3, 1e4);
+            });
+          }
+        },
+        U = N,
+        I = w(U, $, R, !1, null, null, null, !0),
+        F = I.exports;
+      window.customElements.define("cmp-subscriptiontimer", g(i.a, A)),
+        window.customElements.define("cmp-timeout", g(i.a, F));
+    },
+    "5ca1": function(t, e, n) {
+      var r = n("7726"),
+        o = n("8378"),
+        i = n("32e9"),
+        s = n("2aba"),
+        c = n("9b43"),
+        a = "prototype",
+        u = function(t, e, n) {
+          var f,
+            l,
+            p,
+            d,
+            h = t & u.F,
+            v = t & u.G,
+            b = t & u.S,
+            m = t & u.P,
+            y = t & u.B,
+            _ = v ? r : b ? r[e] || (r[e] = {}) : (r[e] || {})[a],
+            x = v ? o : o[e] || (o[e] = {}),
+            g = x[a] || (x[a] = {});
+          for (f in (v && (n = e), n))
+            (l = !h && _ && void 0 !== _[f]),
+              (p = (l ? _ : n)[f]),
+              (d =
+                y && l
+                  ? c(p, r)
+                  : m && "function" == typeof p
+                  ? c(Function.call, p)
+                  : p),
+              _ && s(_, f, p, t & u.U),
+              x[f] != p && i(x, f, d),
+              m && g[f] != p && (g[f] = p);
+        };
+      (r.core = o),
+        (u.F = 1),
+        (u.G = 2),
+        (u.S = 4),
+        (u.P = 8),
+        (u.B = 16),
+        (u.W = 32),
+        (u.U = 64),
+        (u.R = 128),
+        (t.exports = u);
+    },
+    "613b": function(t, e, n) {
+      var r = n("5537")("keys"),
+        o = n("ca5a");
+      t.exports = function(t) {
+        return r[t] || (r[t] = o(t));
+      };
+    },
+    "626a": function(t, e, n) {
+      var r = n("2d95");
+      t.exports = Object("z").propertyIsEnumerable(0)
+        ? Object
+        : function(t) {
+            return "String" == r(t) ? t.split("") : Object(t);
+          };
+    },
+    6821: function(t, e, n) {
+      var r = n("626a"),
+        o = n("be13");
+      t.exports = function(t) {
+        return r(o(t));
+      };
+    },
+    "69a8": function(t, e) {
+      var n = {}.hasOwnProperty;
+      t.exports = function(t, e) {
+        return n.call(t, e);
+      };
+    },
+    "6a99": function(t, e, n) {
+      var r = n("d3f4");
+      t.exports = function(t, e) {
+        if (!r(t)) return t;
+        var n, o;
+        if (e && "function" == typeof (n = t.toString) && !r((o = n.call(t))))
+          return o;
+        if ("function" == typeof (n = t.valueOf) && !r((o = n.call(t))))
+          return o;
+        if (!e && "function" == typeof (n = t.toString) && !r((o = n.call(t))))
+          return o;
+        throw TypeError("Can't convert object to primitive value");
+      };
+    },
+    7726: function(t, e) {
+      var n = (t.exports =
+        "undefined" != typeof window && window.Math == Math
+          ? window
+          : "undefined" != typeof self && self.Math == Math
+          ? self
+          : Function("return this")());
+      "number" == typeof __g && (__g = n);
+    },
+    "77f1": function(t, e, n) {
+      var r = n("4588"),
+        o = Math.max,
+        i = Math.min;
+      t.exports = function(t, e) {
+        return (t = r(t)), t < 0 ? o(t + e, 0) : i(t, e);
+      };
+    },
+    "79e5": function(t, e) {
+      t.exports = function(t) {
+        try {
+          return !!t();
+        } catch (e) {
+          return !0;
+        }
+      };
+    },
+    "7f20": function(t, e, n) {
+      var r = n("86cc").f,
+        o = n("69a8"),
+        i = n("2b4c")("toStringTag");
+      t.exports = function(t, e, n) {
+        t &&
+          !o((t = n ? t : t.prototype), i) &&
+          r(t, i, { configurable: !0, value: e });
+      };
+    },
+    8378: function(t, e) {
+      var n = (t.exports = { version: "2.6.5" });
+      "number" == typeof __e && (__e = n);
+    },
+    "84f2": function(t, e) {
+      t.exports = {};
+    },
+    "86cc": function(t, e, n) {
+      var r = n("cb7c"),
+        o = n("c69a"),
+        i = n("6a99"),
+        s = Object.defineProperty;
+      e.f = n("9e1e")
+        ? Object.defineProperty
+        : function(t, e, n) {
+            if ((r(t), (e = i(e, !0)), r(n), o))
+              try {
+                return s(t, e, n);
+              } catch (c) {}
+            if ("get" in n || "set" in n)
+              throw TypeError("Accessors not supported!");
+            return "value" in n && (t[e] = n.value), t;
+          };
+    },
+    "8bbf": function(t, e) {
+      t.exports = Vue;
+    },
+    "9b43": function(t, e, n) {
+      var r = n("d8e8");
+      t.exports = function(t, e, n) {
+        if ((r(t), void 0 === e)) return t;
+        switch (n) {
+          case 1:
+            return function(n) {
+              return t.call(e, n);
+            };
+          case 2:
+            return function(n, r) {
+              return t.call(e, n, r);
+            };
+          case 3:
+            return function(n, r, o) {
+              return t.call(e, n, r, o);
+            };
+        }
+        return function() {
+          return t.apply(e, arguments);
+        };
+      };
+    },
+    "9c6c": function(t, e, n) {
+      var r = n("2b4c")("unscopables"),
+        o = Array.prototype;
+      void 0 == o[r] && n("32e9")(o, r, {}),
+        (t.exports = function(t) {
+          o[r][t] = !0;
+        });
+    },
+    "9def": function(t, e, n) {
+      var r = n("4588"),
+        o = Math.min;
+      t.exports = function(t) {
+        return t > 0 ? o(r(t), 9007199254740991) : 0;
+      };
+    },
+    "9e1e": function(t, e, n) {
+      t.exports = !n("79e5")(function() {
+        return (
+          7 !=
+          Object.defineProperty({}, "a", {
+            get: function() {
+              return 7;
+            }
+          }).a
+        );
+      });
+    },
+    ac6a: function(t, e, n) {
+      for (
+        var r = n("cadf"),
+          o = n("0d58"),
+          i = n("2aba"),
+          s = n("7726"),
+          c = n("32e9"),
+          a = n("84f2"),
+          u = n("2b4c"),
+          f = u("iterator"),
+          l = u("toStringTag"),
+          p = a.Array,
+          d = {
+            CSSRuleList: !0,
+            CSSStyleDeclaration: !1,
+            CSSValueList: !1,
+            ClientRectList: !1,
+            DOMRectList: !1,
+            DOMStringList: !1,
+            DOMTokenList: !0,
+            DataTransferItemList: !1,
+            FileList: !1,
+            HTMLAllCollection: !1,
+            HTMLCollection: !1,
+            HTMLFormElement: !1,
+            HTMLSelectElement: !1,
+            MediaList: !0,
+            MimeTypeArray: !1,
+            NamedNodeMap: !1,
+            NodeList: !0,
+            PaintRequestList: !1,
+            Plugin: !1,
+            PluginArray: !1,
+            SVGLengthList: !1,
+            SVGNumberList: !1,
+            SVGPathSegList: !1,
+            SVGPointList: !1,
+            SVGStringList: !1,
+            SVGTransformList: !1,
+            SourceBufferList: !1,
+            StyleSheetList: !0,
+            TextTrackCueList: !1,
+            TextTrackList: !1,
+            TouchList: !1
+          },
+          h = o(d),
+          v = 0;
+        v < h.length;
+        v++
+      ) {
+        var b,
+          m = h[v],
+          y = d[m],
+          _ = s[m],
+          x = _ && _.prototype;
+        if (x && (x[f] || c(x, f, p), x[l] || c(x, l, m), (a[m] = p), y))
+          for (b in r) x[b] || i(x, b, r[b], !0);
+      }
+    },
+    be13: function(t, e) {
+      t.exports = function(t) {
+        if (void 0 == t) throw TypeError("Can't call method on  " + t);
+        return t;
+      };
+    },
+    c366: function(t, e, n) {
+      var r = n("6821"),
+        o = n("9def"),
+        i = n("77f1");
+      t.exports = function(t) {
+        return function(e, n, s) {
+          var c,
+            a = r(e),
+            u = o(a.length),
+            f = i(s, u);
+          if (t && n != n) {
+            while (u > f) if (((c = a[f++]), c != c)) return !0;
+          } else
+            for (; u > f; f++)
+              if ((t || f in a) && a[f] === n) return t || f || 0;
+          return !t && -1;
+        };
+      };
+    },
+    c69a: function(t, e, n) {
+      t.exports =
+        !n("9e1e") &&
+        !n("79e5")(function() {
+          return (
+            7 !=
+            Object.defineProperty(n("230e")("div"), "a", {
+              get: function() {
+                return 7;
+              }
+            }).a
+          );
+        });
+    },
+    ca5a: function(t, e) {
+      var n = 0,
+        r = Math.random();
+      t.exports = function(t) {
+        return "Symbol(".concat(
+          void 0 === t ? "" : t,
+          ")_",
+          (++n + r).toString(36)
+        );
+      };
+    },
+    cadf: function(t, e, n) {
+      "use strict";
+      var r = n("9c6c"),
+        o = n("d53b"),
+        i = n("84f2"),
+        s = n("6821");
+      (t.exports = n("01f9")(
+        Array,
+        "Array",
+        function(t, e) {
+          (this._t = s(t)), (this._i = 0), (this._k = e);
+        },
+        function() {
+          var t = this._t,
+            e = this._k,
+            n = this._i++;
+          return !t || n >= t.length
+            ? ((this._t = void 0), o(1))
+            : o(0, "keys" == e ? n : "values" == e ? t[n] : [n, t[n]]);
+        },
+        "values"
+      )),
+        (i.Arguments = i.Array),
+        r("keys"),
+        r("values"),
+        r("entries");
+    },
+    cb7c: function(t, e, n) {
+      var r = n("d3f4");
+      t.exports = function(t) {
+        if (!r(t)) throw TypeError(t + " is not an object!");
+        return t;
+      };
+    },
+    ce10: function(t, e, n) {
+      var r = n("69a8"),
+        o = n("6821"),
+        i = n("c366")(!1),
+        s = n("613b")("IE_PROTO");
+      t.exports = function(t, e) {
+        var n,
+          c = o(t),
+          a = 0,
+          u = [];
+        for (n in c) n != s && r(c, n) && u.push(n);
+        while (e.length > a) r(c, (n = e[a++])) && (~i(u, n) || u.push(n));
+        return u;
+      };
+    },
+    d3f4: function(t, e) {
+      t.exports = function(t) {
+        return "object" === typeof t ? null !== t : "function" === typeof t;
+      };
+    },
+    d53b: function(t, e) {
+      t.exports = function(t, e) {
+        return { value: e, done: !!t };
+      };
+    },
+    d54c: function(t, e, n) {
+      (e = t.exports = n("2350")(!1)),
+        e.push([
+          t.i,
+          '.timerContainer{display:inline-block}.timer_pre_expiry h3{color:green}.timer_post_expiry i,.timer_pre_expiry i{color:#9400d3}.timer_post_expiry i:after,.timer_post_expiry i:before,.timer_pre_expiry i:after,.timer_pre_expiry i:before{content:"\\A0"}.timer_post_expiry h3{color:red}',
+          ""
+        ]);
+    },
+    d8e8: function(t, e) {
+      t.exports = function(t) {
+        if ("function" != typeof t) throw TypeError(t + " is not a function!");
+        return t;
+      };
+    },
+    e11e: function(t, e) {
+      t.exports = "constructor,hasOwnProperty,isPrototypeOf,propertyIsEnumerable,toLocaleString,toString,valueOf".split(
+        ","
+      );
+    },
+    fa5b: function(t, e, n) {
+      t.exports = n("5537")("native-function-to-string", Function.toString);
+    },
+    fab2: function(t, e, n) {
+      var r = n("7726").document;
+      t.exports = r && r.documentElement;
+    }
+  });
+</script>
 <style>
   p {
     font-family: sans-serif;
