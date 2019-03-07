@@ -4,7 +4,7 @@ Video Media Component is a web component developed using angular 7 for video scr
 if user scroll the webpage video also scroll as per user requirement.
 
 ## Output Format for Desktop view
-<p align='center'><img src="./video media.PNG"></p>
+<p align='center'><img src="./video media.png"></p>
 
   
 
