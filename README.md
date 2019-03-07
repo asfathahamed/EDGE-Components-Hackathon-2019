@@ -107,6 +107,46 @@ To preview the rating components [Click here](https://rjomv8kmyo.codesandbox.io/
 
   ```
   
+  ## HalfRating
+    Displays half rating on hover
+    
+  ### Input:
+  ```
+  HalfRating.propTypes = {
+    maxRating:PropTypes.number,
+    currentRating:PropTypes.number,
+    updateRating:PropTypes.func.isRequired,
+    selectedColor:PropTypes.string,
+    emptyColor:PropTypes.string
+}
+  ```
+  
+ ### DefaultValues:
+ ```
+ HalfRating.defaultProps ={
+    maxRating:5,
+    currentRating:0,
+    selectedColor:"yellow",
+    emptyColor:"transparent"
+}
+ ```
+ 
+ ### Listening to events:
+ ```
+ markRating = (id,name) => {
+       // console.log("MARK --------- ",name );
+        this.setState((oldState) => {
+            let rating;
+            if(name == "rect1")
+                return {currentRating:parseInt(id) - 0.5};
+            return {currentRating:parseInt(id)};
+        }, () => {
+            console.log("Rating ",this.state.currentRating);
+            this.props.updateRating(this.state.currentRating);
+        })
+    }
+    ```
+  
   
  # Dependecies:-
    ```
