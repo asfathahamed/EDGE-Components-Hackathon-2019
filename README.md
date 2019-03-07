@@ -7,6 +7,7 @@ The Theme Change component is useful for changing the theme of a page which is h
 <p align="center"> 
   <img width="800" height="400" src="Images/ThemeChangeComponentBeforeApplyingTheme.PNG" alt="Theme-change-component-Img">
 </p>
+
  #### After Applying Theme
  <p align="center">
   <img width="800" height="400" src="Images/ThemeChangeComponentAfterApplyingTheme.PNG" alt="Theme-change-component-Img">
