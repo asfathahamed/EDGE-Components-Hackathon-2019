@@ -13,7 +13,7 @@ The Theme Change component is useful for changing the theme of a page which is h
   <img width="800" height="400" src="Images/ThemeChangeComponentAfterApplyingTheme.PNG" alt="Theme-change-component-Img">
  </p>
  
- To preview demo of countdown-timer component, [Click here](https://angular-scss-demo-nviski.stackblitz.io)
+ To preview demo of countdown-timer component, [Click here](https://angular-scss-demo-v43tvk.stackblitz.io)
 
 ## Using the complete angular project
 Download the Theme Change Component folder and install the required packages and run the application.
@@ -30,6 +30,10 @@ Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app w
 
 Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
 
+## How it works
 
-### HOW TO USE ?
+User selects the theme-color,text-alignment,font-style and font-family from the theme-picker and clicks on submit button,will get change in the page appearance.
+    
+
+In this Theme Change Component creation, we used @angular/forms and @ng-bootstrap/ng-bootstrap dependencies.
 
