@@ -1,0 +1,52 @@
+.pagination-container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 16px;
+  height: 50px;
+  background-color: black;
+  color: white;
+  font-family: "Courier New", Courier, monospace;
+}
+
+.pagination-container .buttons {
+  margin: 10px;
+  cursor: pointer;
+}
+
+.pagination-container .hide {
+  pointer-events: none;
+  cursor: pointer;
+  color: gray;
+}
+
+.pagination-container .show {
+  display: block;
+}
+
+.pagination-container ul {
+  list-style: none;
+  padding-inline-start: 0px;
+}
+
+.pagination-container li {
+  font-size: 16px;
+  display: inline-block;
+  width: 32px;
+  height: 32px;
+  text-align: center;
+  padding-top: 4px;
+  opacity: 0.5;
+  border: 1px solid white;
+  color: white;
+  font-family: "Courier New", Courier, monospace;
+  line-height: 30px;
+}
+
+.pagination-container li.selected {
+  font-weight: bolder;
+  text-decoration: underline;
+  opacity: 1;
+  color: orange;
+}
