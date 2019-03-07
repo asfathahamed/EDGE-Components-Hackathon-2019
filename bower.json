@@ -1,0 +1,20 @@
+{
+  "name": "react-table",
+  "main": "dist/react-table.js",
+  "version": "1.0.0",
+  "description": "A simple sortable table component for react",
+  "keywords": [
+    "react",
+    "react-component",
+    "table",
+    "sortable-table",
+    "sortable"
+  ],
+  "ignore": [
+    "**/.*",
+    "examples",
+    "node_modules",
+    "bower_components",
+    "test"
+  ]
+}

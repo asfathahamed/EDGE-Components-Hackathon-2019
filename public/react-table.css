@@ -1,0 +1,27 @@
+.react-table {
+  border-collapse: collapse;
+  border-spacing: 0;
+  empty-cells: show;
+  text-align: left;
+}
+
+.react-table__thead {
+  vertical-align: bottom;
+}
+
+.react-table__th {
+  padding: .75em 1em;
+}
+
+.react-table caption {
+  padding: 1em 0;
+  text-align: center;
+}
+
+.react-table td,
+.react-table th {
+    font-size: inherit;
+    margin: 0;
+    overflow: visible;
+    padding: .75em 1em;
+}
