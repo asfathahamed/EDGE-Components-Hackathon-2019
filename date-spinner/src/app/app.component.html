@@ -1,0 +1,2 @@
+<div class="container mt-5">Current Selected Date: {{selectedDate}}</div>
+<app-date-spinner [startYear]="startingYear" [endYear]="endingYear" (selectedDate)="getSelectedDate($event)"></app-date-spinner>
