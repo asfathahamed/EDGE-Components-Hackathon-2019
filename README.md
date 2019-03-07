@@ -30,7 +30,9 @@ Download the Pagination Component folder and install the required packages and r
 ### HOW TO USE ?
 
 #### 1. Provide the JSON data
-Provide the sample JSON data
+Provide the sample JSON data inside the component <br>
+``` dataSource ``` : holding the Table information <br>
+``` displayedColumns ``` : column keys for table information
 
 #### 2. Searching
 It uses the global search concept
@@ -41,9 +43,10 @@ Sorting feature is available with alphabetical order
 #### 4. Pagination
 Use the pagination Bar for finding the pages easily.
 
-Pass the data to table component as mentioned below
-<table-overiew-example> <table-overiew-example>
-
+### Pass the data to table component as mentioned below
+```
+<table-overview-example></table-overview-example>
+```
 
 
 
