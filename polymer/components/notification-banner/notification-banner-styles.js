@@ -40,15 +40,15 @@ const template = html`
         }
 
         paper-dialog.success {
-            border: 1px solid #4caf50;
-            background-color: var(--notification-banner-bg-color, #f1f8e9);
-            color: var(--notification-banner-color, #4caf50);
+            border: 1px solid var(--notification-banner-success-border-color, #4caf50);
+            background-color: var(--notification-banner-success-bg-color, #f1f8e9);
+            color: var(--notification-banner-success-color, #4caf50);
         }
 
         paper-dialog.error {
-            border: 1px solid #f50808;
-            background-color: var(--notification-banner-bg-color, #f7d7d7);
-            color: var(--notification-banner-color, #f50808);
+            border: 1px solid var(--notification-banner-error-border-color, #f50808);
+            background-color: var(--notification-banner-error-bg-color, #f7d7d7);
+            color: var(--notification-banner-error-color, #f50808);
         }
 
         paper-dialog.custom {
@@ -72,7 +72,7 @@ const template = html`
         .toast {
             background: var(--notification-banner-toast-bg-color, #363636);
             border-radius: 5px;
-            color: var(--notification-banner-toast-bg-color, #ffffff);
+            color: var(--notification-banner-toast-color, #ffffff);
         }
 
         .top-left {
