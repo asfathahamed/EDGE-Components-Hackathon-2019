@@ -1,4 +1,4 @@
-https://angular-scss-demo-nviski.stackblitz.io# EDGE-Components-Hackathon-2019
+# EDGE-Components-Hackathon-2019
 # Theme Change Component
 
 The Theme Change component is useful for changing the theme of a page which is having the features like changing theme color,text-alignment,font-style and font-family of a page. 
