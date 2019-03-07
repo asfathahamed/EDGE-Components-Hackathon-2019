@@ -4,7 +4,7 @@
 The Date Spinner Component is useful for selecting date by spinning or by selecting from dropdown.
 
 <p align="center">
-  <img width="600" height="400" src="https://github.com/ERS-HCL/EDGE-Components-Hackathon-2019/blob/ERSEDGE022019037/Image/date_spinner_preview.PNG">
+  <img width="500" height="400" src="https://github.com/ERS-HCL/EDGE-Components-Hackathon-2019/blob/ERSEDGE022019037/Image/date_spinner_preview_image.PNG">
 </p>
 
 ### To preview demo of Date Spinner Component, [Click here](https://date-spinner-component.stackblitz.io/)
