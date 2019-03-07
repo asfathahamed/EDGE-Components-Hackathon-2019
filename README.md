@@ -5,7 +5,7 @@
 The Pagination component is useful for creating material pagination which having features like searching, sorting, filtering & pagination.
 
 <p align="center">
-  <img width="400" height="400" src="">
+  <img width="800" height="400" src="https://github.com/ERS-HCL/EDGE-Components-Hackathon-2019/blob/ERSEDGE022019055/Images/pagination.PNG">
 </p>
 
 
