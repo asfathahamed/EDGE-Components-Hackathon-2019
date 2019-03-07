@@ -17,7 +17,9 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 ![alt text](img/mobile_view.jpg)
 
 ## Demo
-You may want to have a look at the demo https://hackathon2019.stackblitz.io
+You may want to have a look at the demo 
+https://kkvipvzn.github.stackblitz.io
+https://hackathon2019.stackblitz.io
 
 ## Test cases
 The word file is attached.
