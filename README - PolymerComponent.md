@@ -10,7 +10,7 @@ npm install -g polymer-cli
 npm install
 ```
 
-### Serve the componen
+### Serve the component
 ```
 polymer serve --open
 ```
