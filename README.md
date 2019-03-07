@@ -2,7 +2,10 @@
 
 ### VideoMedia Component using  AngularMaterial
 
-![alt text](http://url/to/img.png)
+
+![alt text](https://github.com/ERS-HCL/EDGE-Components-Hackathon-2019/blob/ERSEDGE022019011/Images/video.png)
+![alt text](https://github.com/ERS-HCL/EDGE-Components-Hackathon-2019/blob/ERSEDGE022019011/Images/modal.png)
+![alt text](https://github.com/ERS-HCL/EDGE-Components-Hackathon-2019/blob/ERSEDGE022019011/Images/scroll.png)
 
 
 To preview demo of VideomediaComponent, [Click Here](https://angular-2h4j53.stackblitz.io).
@@ -38,15 +41,12 @@ $ ng serve
   @Input()  scroll: number;
 ```
 
+
 | Input | Purpose |
-
 | ------ | ------ |
-
 | title |   Title for the component |
-
 | src | Path of video  |
-
-| scroll | To fix the video when exceeded the scroll  |
+| scroll | To fix the video when exceeded the scroll value  |
 
 
 #### How it works?
@@ -55,7 +55,7 @@ $ ng serve
 
 - Play option will play the video Inline.
 
-- Modal option will display popup window to play the video.
+- Modal option will display Modal view to play the video.
 
 - If you scroll down the page then the video is fixed at top-right position.
 
