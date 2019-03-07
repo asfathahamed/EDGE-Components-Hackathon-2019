@@ -42,7 +42,7 @@ Sorting feature is available with alphabetical order
 Use the pagination Bar for finding the pages easily.
 
 Pass the data to table component as mentioned below
-<app-table-overiew-example  [TableData]="tableInfo"  [TableHeadersInfo]="tableHeadersInfo"></app-table-overiew-example>
+<table-overiew-example> <table-overiew-example>
 
 
 
