@@ -50,7 +50,7 @@ class HalfRating extends Component{
     }
 
     markRating = (id,name) => {
-       // console.log("MARK --------- ",name );
+       console.log("MARK --------- ",name );
         this.setState((oldState) => {
             let rating;
             if(name == "rect1")
@@ -82,26 +82,27 @@ class HalfRating extends Component{
     }
 
     removeHover = () => {
-        //console.log("removeHover");
+        
+        console.log("removeHover");
          let rating = parseInt(this.state.currentRating);       
          if(this.state.currentRating){
              for(let i=1; i<=rating; i++){ 
-               //  console.log("IN ",i);               
+                 console.log("IN ",i);               
                  this.setBackground("rect1"+i,this.selectedColor);
                  this.setBackground("rect2"+i,this.selectedColor);
              }
          }
  
          let j = rating + 1;
-         if(j - this.state.currentRating == 0.5){
-             j++;             
+         if(j - this.state.currentRating == 0.5){                        
              this.setBackground("rect1"+j,this.selectedColor);
              this.setBackground("rect2"+j,this.emptyColor);
+             j++; 
          }
-         //console.log("RR ",rating,j);
+         console.log("RR ",rating,j);
  
          for(j; j <= this.maxRating; j++){
-           // console.log("MISS ",j);            
+           console.log("MISS ",j);            
             this.setBackground("rect1"+j,this.emptyColor);
             this.setBackground("rect2"+j,this.emptyColor);
         }      
@@ -111,7 +112,7 @@ class HalfRating extends Component{
 
     rect = (cName,id,styles) => {
         let refs = cName+id;
-       // console.log("rect ",className);
+        console.log("rect ",cName);
 
         return (<div className={cName} id={id} ref={refs}
         onClick={(event) => this.markRating(event.currentTarget.id,cName)}
@@ -122,7 +123,7 @@ class HalfRating extends Component{
     }
 
     addRate = (id) => {
-       // console.log("addRate  ---- ", id);
+        console.log("addRate  ---- ", id);
         let rating = parseInt(this.state.currentRating);
         let decimal = (this.state.currentRating * 10)%10; 
         let styleObj = [];
