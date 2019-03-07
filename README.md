@@ -18,6 +18,8 @@ Now just change contextMenu text and pass menu titles for menu clicked.
 
 Then run and right click on displayed text, you can see custom context menu list items like below
 
+<img src="images/image1.jpg"/>
+
 E.g. `<ContextMenu contextMenuItems={['Option 1', 'Option 2', 'Option 3']} onSelect={onSelectHandler}>
       this is context menu
     </ContextMenu>`
