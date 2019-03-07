@@ -26,3 +26,14 @@ npm install -g serve
 ```
 serve -s dist
 ```
+
+
+### To build app as web component, run the below command. A dist folder will be created with a demo.html. Pass the needed props to the component.
+```
+npm run wc
+```
+
+### Demo Link
+```
+http://htmlpreview.github.io/?https://github.com/ERS-HCL/EDGE-Components-Hackathon-2019/blob/ERSEDGE022019039/vue/dist/demo.html
+```
