@@ -25,6 +25,7 @@ You will also see any lint errors in the console.
 1. Import SessionTimeOut from timeout-component.js which is present under components folder.
 
 2. Set the properties
+
 | Prop  |  Value | Description  |
 | ------------ | ------------ | ------------ |
 |  inActivityTime |  numeric value in seconds | The time that needs to be considered as inactive if there is no acitivity on the page/application.   |
@@ -47,6 +48,7 @@ You will also see any lint errors in the console.
 1. Import RatingComponent from rating-component.js which is present under components folder.
 
 2. Set the properties
+
 | Prop  | Value  |  Description |
 | ------------ | ------------ | ------------ |
 |  name |  text |  Give any name to the component |
@@ -58,6 +60,9 @@ You will also see any lint errors in the console.
 | selectionCallback | function | The callback to handle the selection. Two parameters will be returned on selection - value and text |
 
 3. Include the component in whichever page it is needed.
+
+# Demo
+https://cryptic-tor-62566.herokuapp.com/
 
 
 
