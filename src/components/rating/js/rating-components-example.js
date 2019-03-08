@@ -71,7 +71,7 @@ class RatingPanelSection extends Component {
                         <MDBCardBody>
                           <MDBCardText>
                             <RatingComponent
-							  selectionCallback={(value, text) => {
+			      selectionCallback={(value, text) => {
                                 toast.info("Thank you for rating " + value, {
                                   position: "top-right"
                                 });
@@ -105,7 +105,7 @@ class RatingPanelSection extends Component {
                         <MDBCardBody>
                           <MDBCardText>
                             <RatingComponent
-							  selectionCallback={(value, text) => {
+			     selectionCallback={(value, text) => {
                                 toast.info("Thank you for rating " + value, {
                                   position: "top-right"
                                 });
@@ -143,7 +143,7 @@ class RatingPanelSection extends Component {
                         <MDBCardBody>
                           <MDBCardText>
                             <RatingComponent
-							  selectionCallback={(value, text) => {
+			      selectionCallback={(value, text) => {
                                 toast.info("Thank you for rating " + value, {
                                   position: "top-right"
                                 });
@@ -183,7 +183,7 @@ class RatingPanelSection extends Component {
                         <MDBCardBody>
                           <MDBCardText>
                             <RatingComponent
-							  selectionCallback={(value, text) => {
+			     selectionCallback={(value, text) => {
                                 toast.info("Thank you for rating " + value, {
                                   position: "top-right"
                                 });
@@ -217,7 +217,7 @@ class RatingPanelSection extends Component {
                         <MDBCardBody>
                           <MDBCardText>
                             <RatingComponent
-							  selectionCallback={(value, text) => {
+			      selectionCallback={(value, text) => {
                                 toast.info("Thank you for rating " + value, {
                                   position: "top-right"
                                 });
@@ -258,7 +258,7 @@ class RatingPanelSection extends Component {
                         <MDBCardBody>
                           <MDBCardText>
                             <RatingComponent
-							  selectionCallback={(value, text) => {
+			      selectionCallback={(value, text) => {
                                 toast.info("Thank you for rating " + value, {
                                   position: "top-right"
                                 });
