@@ -12,7 +12,7 @@ class App extends Component {
     return (
       <div className="App">
 		<SessionTimeOutSample></SessionTimeOutSample>
-        <RatingPanelSection></RatingPanelSection>
+        	<RatingPanelSection></RatingPanelSection>
       </div>
     );
   }
