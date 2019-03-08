@@ -35,3 +35,8 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
 ## Author - Date Picker:
 
 Saleem Malik : https://github.com/saleemmalikraja 
+
+
+## Author - Context Menu
+
+Koushik R : https://github.com/koushik27
