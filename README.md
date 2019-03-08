@@ -24,7 +24,7 @@ Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protrac
 
 ## DEMO
 
-https://stackblitz.com/github.com/saleemmalikraja/EDGE-Components-Hackathon-2019/tree/ERSEDGE022019047
+https://stackblitz.com/github.com/ERS-HCL/EDGE-Components-Hackathon-2019/tree/ERSEDGE022019047
 
 
 ## Further help
