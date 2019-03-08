@@ -3,7 +3,7 @@
   <h1>
     Welcome to {{ title }}!
   </h1>
-  <img width="300" alt="HCL Logo" src="../assets/hcl-business.jpg">
+  <img width="300" height="200" alt="HCL Logo" src="../assets/hcl-business.jpg">
 </div>
 
 <div class="fit-to-center">
@@ -14,4 +14,8 @@
   </app-quick-date-picker>
 
   <h3>Range : {{firstdate | date}} - {{lastdate | date}}</h3>
+</div>
+
+<div class="parent">Context Menu Area
+  <app-context-menu [data]=data (optionClick)="click($event)" (closed)="click($event)"></app-context-menu>
 </div>

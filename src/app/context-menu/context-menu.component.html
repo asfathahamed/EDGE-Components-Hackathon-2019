@@ -1,0 +1,6 @@
+<div [matMenuTriggerFor]="menu"></div>
+<mat-menu #menu="matMenu" class="context-menu-overlap-class" (closed)="closedMenu('closed')">
+  <ng-container *ngFor="let opt of data">
+    <button mat-menu-item (click)="menuClick($event, opt)" [disabled]=opt.disabled>{{opt.name}}</button>
+  </ng-container>
+</mat-menu>

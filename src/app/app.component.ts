@@ -18,6 +18,19 @@ export class AppComponent implements OnInit {
   lastdate: string;
   dateFormatToLocal = 'MM/dd/yy hh:mm:ss a';
 
+  data = [
+    {
+      name: 'option1', disabled: true
+    },
+    {
+      name: 'option2'
+    }
+  ];
+
+  click(val) {
+    console.log(val);
+  }
+
   constructor(
     private datePipe: DatePipe) {
 
