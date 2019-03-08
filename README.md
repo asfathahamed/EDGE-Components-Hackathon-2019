@@ -51,6 +51,26 @@ Finally a pop-up having a *Key* will be shown to you
 
 ![alt text](https://github.com/ERS-HCL/EDGE-Components-Hackathon-2019/blob/ERSEDGE022019005/src/assets/Google%20API%20Key%20-%2011.png)
 
+#### Step 1 ( Configure the Google API Key into your application )
+
+Place the following script with your API Key in your root HTML file,
+
+*<script async defer src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&callback=initMap" type="text/javascript"></script>*
+
+As this is an Angular application, so you have to place the script in your *index.html* file.
+
+#### Step 1 ( Install the required typings )
+
+As you use typesting in your Angular application, directly you cant you the Google map objects because of type error. To avoid this please install ony one of the following typings plugin.
+  
+  `npm i @types/google-maps`
+  
+  *OR*
+  
+  `npm i @types/googlemaps`
+
+For this application `@types/google-maps`is being used.
+
 ## Development server
 
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
