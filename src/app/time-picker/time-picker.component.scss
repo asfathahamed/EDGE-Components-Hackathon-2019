@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 
 .app-time-picker {
     display: flex;
@@ -14,21 +13,4 @@
         position: relative;
         bottom: .07em;
     }
-=======
-
-.app-time-picker {
-    display: flex;
-    flex-wrap: wrap;
-    align-items: flex-end;
-    max-width: 18em;
-    margin: auto;
-    app-number-input {
-        flex-grow: 1;
-        padding-right: 1em;
-    }
-    app-toggle-button {
-        position: relative;
-        bottom: .07em;
-    }
->>>>>>> 4e760c76b04e8e760874b229923ed705a6b62ded
 }
