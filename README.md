@@ -51,7 +51,7 @@ Finally a pop-up having a *Key* will be shown to you
 
 ![alt text](https://github.com/ERS-HCL/EDGE-Components-Hackathon-2019/blob/ERSEDGE022019005/src/assets/Google%20API%20Key%20-%2011.png)
 
-#### Step 1 ( Configure the Google API Key into your application )
+#### Step 2 ( Configure the Google API Key into your application )
 
 Place the following script with your API Key in your root HTML file,
 
@@ -59,7 +59,7 @@ Place the following script with your API Key in your root HTML file,
 
 As this is an Angular application, so you have to place the script in your *index.html* file.
 
-#### Step 1 ( Install the required typings )
+#### Step 3 ( Install the required typings )
 
 As you use typesting in your Angular application, directly you cant you the Google map objects because of type error. To avoid this please install ony one of the following typings plugin.
   
@@ -70,6 +70,37 @@ As you use typesting in your Angular application, directly you cant you the Goog
   `npm i @types/googlemaps`
 
 For this application `@types/google-maps`is being used.
+
+#### Step 4 ( How to use the component )
+
+To use this component you can use *<locate-on-map>* in your any of the parent component. And you can follow the attribute section for proving the inputs to the component. The component looks as provided below,
+  
+When component loads to the browser
+
+![alt text](https://github.com/ERS-HCL/EDGE-Components-Hackathon-2019/blob/ERSEDGE022019005/src/assets/Component%20-%201.png)
+
+It will ask you on browser location, either you can click *Allow* or *Block*.
+
+If you click *Allow* then it will take you browser location lattitude and logitude.
+
+If you click *Block* the it will show the component's *defaultMapPosition*. You can also provide input for *defaultMapPosition*.
+
+Finally the component gets load as below
+
+![alt text](https://github.com/ERS-HCL/EDGE-Components-Hackathon-2019/blob/ERSEDGE022019005/src/assets/Component%20-%202.png)
+
+You can search and select a location in the input auto complete suggestion
+
+![alt text](https://github.com/ERS-HCL/EDGE-Components-Hackathon-2019/blob/ERSEDGE022019005/src/assets/Component%20-%205.png)
+  
+If you click the marker, it shows you an *Info WIndow* having imformation like *Address details*, *Contact Info*, *Open Hours*, *Working Schedules of the week*, *Rating*, *User reviews* and *Photo gallery* if available for the place you have searched.
+
+![alt text](https://github.com/ERS-HCL/EDGE-Components-Hackathon-2019/blob/ERSEDGE022019005/src/assets/Component%20-%203.png)
+
+![alt text](https://github.com/ERS-HCL/EDGE-Components-Hackathon-2019/blob/ERSEDGE022019005/src/assets/Component%20-%204.png)
+
+
+### Locate on Map
 
 ## Development server
 
