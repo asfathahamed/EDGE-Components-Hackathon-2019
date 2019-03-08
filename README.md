@@ -1,6 +1,13 @@
-# ErsHachathon
+# Ers Hachathon Challenge - 2019
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 6.1.3.
+This project contains below components for the hackathon challenge 2019,
+
+    <ul>
+      <li> Locate on map </li>
+      <li> Timeout component </li>
+      <li> Pagination </li>
+      <li> Table component </li>
+    <ul>
 
 ## Development server
 
