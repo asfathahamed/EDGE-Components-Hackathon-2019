@@ -1,0 +1,28 @@
+.react-countdown-clock {
+	display: inline-block;
+}
+
+.md-progress {
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    position: relative;
+    display: block;
+    width: 100%;
+    height: .25rem;
+    overflow: hidden;
+    margin-bottom: 1rem;
+    background-color: #eee;
+}
+
+.md-progress .progress-bar {
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    height: .25rem;
+    -webkit-border-radius: 0;
+    border-radius: 0;
+    background-color: #fb3;
+}
+
+.sessionTimeOutModal button.close {
+	display: none;
+}
