@@ -19,7 +19,37 @@ Apart from using the component tag, you have to follow the below steps as you wi
 
 #### Step 1 ( Getting the Google API Key )
 
-Usually Google do not let you access the their cloud APIs with having the access key. To get the Google API Key, please 
+Usually Google do not let you access the their cloud APIs with having the access key. To get the Google API Key, please [click]( https://developers.google.com/maps/documentation/javascript/get-api-key).
+
+![alt text](https://github.com/ERS-HCL/EDGE-Components-Hackathon-2019/blob/ERSEDGE022019005/src/assets/Google%20API%20Key%20-%201.png)
+
+Pick the product which you want to use and click next
+
+![alt text](https://github.com/ERS-HCL/EDGE-Components-Hackathon-2019/blob/ERSEDGE022019005/src/assets/Google%20API%20Key%20-%202.png)
+
+![alt text](https://github.com/ERS-HCL/EDGE-Components-Hackathon-2019/blob/ERSEDGE022019005/src/assets/Google%20API%20Key%20-%203.png)
+
+Select the project, you can choose *My Project* or you can create a project and click next
+
+![alt text](https://github.com/ERS-HCL/EDGE-Components-Hackathon-2019/blob/ERSEDGE022019005/src/assets/Google%20API%20Key%20-%207.png)
+
+Create your billing account for the selected project
+
+![alt text](https://github.com/ERS-HCL/EDGE-Components-Hackathon-2019/blob/ERSEDGE022019005/src/assets/Google%20API%20Key%20-%208.png)
+
+Select your country and check the *Terms of service* and click on *AGREE AND CONTINUE*
+
+![alt text](https://github.com/ERS-HCL/EDGE-Components-Hackathon-2019/blob/ERSEDGE022019005/src/assets/Google%20API%20Key%20-%209.png)
+
+Provide your basic personnal information and click next
+
+![alt text](https://github.com/ERS-HCL/EDGE-Components-Hackathon-2019/blob/ERSEDGE022019005/src/assets/Google%20API%20Key%20-%2010.png)
+
+**Note:** It will ask you to provide *Credit Card* or *Debit Card* information, you can provide and just for checking they may take *1 INR*. For 1 year the *Key* will be free post you have to pay if you wish to continue.  
+
+Finally a pop-up having a *Key* will be shown to you
+
+![alt text](https://github.com/ERS-HCL/EDGE-Components-Hackathon-2019/blob/ERSEDGE022019005/src/assets/Google%20API%20Key%20-%2011.png)
 
 ## Development server
 
