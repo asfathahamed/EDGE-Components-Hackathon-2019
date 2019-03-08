@@ -2,10 +2,10 @@
 
 This project contains below components for the hackathon challenge 2019,
 
-    - Locate on map
-    - Timeout component
-    - Pagination
-    - Table component
+- Locate on map
+- Timeout component
+- Pagination
+- Table component
 
 ## Development server
 
