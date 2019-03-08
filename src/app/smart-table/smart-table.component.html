@@ -1,0 +1,32 @@
+<div class="smart-filter">
+  <input #myInput placeholder="Item name..." [(ngModel)]="name">
+</div>
+<table>
+  <thead>
+    <tr>
+      <th *ngFor="let header of headers" scope="col">
+        <div class="header" (mouseover) = "displaySortArrow(header.key)" (click) = "onSort(header.key)">{{header.value}}
+          <span class="sort-arrow" *ngIf="headerHover === header.key && toggleSort">
+              &uarr;
+          </span>
+          <span class="sort-arrow" *ngIf="headerHover === header.key && !toggleSort"  >
+              &darr;
+          </span>
+        </div>
+      </th>
+    </tr>
+  </thead>
+  
+  <tbody>
+  <tr *ngFor="let item of pagedData | orderBy:orderByKey:order | filterBy: myInput.value">
+    <!-- <td scope="row" data-label="Column 1">1</td>
+    <td data-label="Column 2">2</td>
+    <td data-label="Column 3">3</td>
+    <td data-label="Column 4">4</td> -->
+    <td *ngFor="let header of headers" [attr.data-label]="header.value">
+      {{item[header.key]}}
+    </td>
+  </tr>
+  </tbody>  
+</table>
+<app-pagination [paginationStyle]="'nextprev'" [dataLength]="list.length" (pageInfoChange)="onItemPerPageChange($event)"></app-pagination>

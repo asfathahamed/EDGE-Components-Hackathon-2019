@@ -1,0 +1,99 @@
+table {
+    border: 1px solid #ccc;
+    border-collapse: collapse;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    border: 1px solid rgba(0,0,0,.03);
+    box-shadow: 0 2px 2px rgba(0,0,0,.24), 0 0 2px rgba(0,0,0,.12);
+  }
+  
+  table tr {
+    /* background: #f8f8f8; */
+    border: 1px solid #ddd;
+    padding: .35em;
+    height: 56px;
+    font-family: Roboto,"Helvetica Neue",sans-serif;
+  }
+
+  table tr:hover{
+    background: #f8f8f8;
+  }
+  
+  table th, table td {
+    padding: .625em;
+    text-align: center;
+  }
+  
+  table th {
+    font-size: .85em;
+    color: rgba(0,0,0,.54);
+    /* text-transform: uppercase; */
+  }
+
+  .smart-filter{
+    border-bottom: 1px solid #191919;
+    margin-bottom: 4px;
+  }
+
+  .smart-filter input{
+    font: inherit;
+    background: 0 0;
+    border: none;
+    outline: 0;
+    padding: 0;
+    margin: 0;
+    width: 100%;
+    max-width: 100%;
+    vertical-align: bottom;
+    text-align: inherit;
+    font-family: Roboto,"Helvetica Neue",sans-serif;
+  }
+
+  .smart-filter:focus-within{
+    border-bottom: 2px solid #3f51b5;
+  }
+
+  .sort-arrow{
+    color: black;
+    font-size: large;
+  }
+
+  .header{
+      cursor: pointer;
+  }
+
+  @media screen and (max-width: 639px) {
+
+    table { border: 0; }
+    
+    table thead { display: none; }
+    
+    table tr {
+      display: block;
+      margin-bottom: .625em;
+      border: 1px solid rgba(0,0,0,.03);
+      box-shadow: 0 2px 2px rgba(0,0,0,.24), 0 0 2px rgba(0,0,0,.12);
+      height: 100%;
+      font-family: Roboto,"Helvetica Neue",sans-serif;
+    }
+    
+    table td {
+      border-bottom: 1px solid #ddd;
+      display: block;
+      font-size: .85em;
+      text-align: right;
+      height: 46px;
+    }
+    
+    table td:before {
+      content: attr(data-label);
+      float: left;
+      font-weight: bold;
+      color: rgba(0,0,0,.54);
+      /* text-transform: uppercase; */
+    }
+    
+    table td:last-child { border-bottom: 0; }
+    
+    }
