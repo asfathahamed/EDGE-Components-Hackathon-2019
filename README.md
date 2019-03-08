@@ -7,6 +7,20 @@ This project contains below components for the hackathon challenge 2019,
 - Pagination
 - Table component
 
+### Component 1: Locate on map
+
+Using this component user can search the places and can view the places on the map with various *icon*, *photos near by*, *address details*, *rating*, *review*, etc.
+
+#### How to use Loacte on map component
+
+The component can be used using the tag i.e *<locate-on-map></locate-on-map>* in any of your parent component where you want to use.
+
+Apart from using the component tag, you have to follow the below steps as you will access the *Google Map* API for doing the *Geocoding*, *Text auto search*, etc.
+
+#### Step 1 ( Getting the Google API Key )
+
+Usually Google do not let you access the their cloud APIs with having the access key. To get the Google API Key, please 
+
 ## Development server
 
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
