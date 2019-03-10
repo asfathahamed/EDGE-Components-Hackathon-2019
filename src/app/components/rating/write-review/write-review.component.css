@@ -1,6 +1,6 @@
 .popupBgGrey{position:fixed;z-index:99999;top:0;left:0;width:100%;height:100%;display:flex;background:#aaa;background-color:rgba(255,255,255,0.9)}
 h4.popup-title{margin:0;padding:10px;color:#fff;background:#fa527d;display:block}
-.popup{position:fixed;top:50%;left:50%;-webkit-transform:translate(-50%, -50%);transform:translate(-50%, -50%);width:40%;background:#fff;box-shadow:0 0 20px #d4cfcf;padding:0 0 10px 0; z-index: 2;}
+.popup{position:fixed;top:50%;left:50%;-webkit-transform:translate(-50%, -50%);transform:translate(-50%, -50%);width:60%;background:#fff;box-shadow:0 0 20px #d4cfcf;padding:0 0 10px 0; z-index: 2;}
 .popupClose{cursor:pointer;background:#ffb749;text-align:center;width:25px;height:25px;line-height:25px;right:-10px;top:-10px;position: absolute;box-shadow:0 0 10px #d4cfcf;color:#fff;border-radius:25px;font-style: normal}
 .popupClose:hover{box-shadow:0 0 10px #ffb749;background:#fff;color:#999}
 

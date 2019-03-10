@@ -1,12 +1,12 @@
 <div class="container">
 	<div class="row outerWrapper">
 		<div class="col-xs-12">
-			<h2 class="productTitle"><span>{{ ProductName }}</span></h2>
+			<h1 class="pageTitle">{{ ProductName }}</h1>
 			<div class="row">
 				<div ngClass="col-sm-12">
 					<div>
 						<ul class='productList'>
-							<li class="col-xs-12 col-md-3 clearfix"
+							<li class="col-xs-12 col-sm-4 col-md-3 clearfix"
 								*ngFor='let item of _getProductList.productItems, let dataId = index'>
 								<div class="prodImg"><img [src]="item.img" class="img-responsive" routerLink="/product/{{ item.id }}" /></div>
 								<div class="prodDetails clearfix">

@@ -11,8 +11,26 @@ header nav.navbar-inverse:hover{box-shadow:0px 10px 18px 0px #888888;transition-
 #headerRightNav{float:right;margin-top:15px}
 #headerRightNav li{display:inline-block;border-right: 1px solid #313131}
 #headerRightNav li:last-child{border-right: 1px solid transparent}
-#headerRightNav li a{color:#fff;display:block;padding:10px 20px;transition-duration: 0.5s;border-radius:4px}
-#headerRightNav li a:hover{text-shadow:1px 1px 2px #5d5d5d;background:#b1b1b1;color:#fff;display:block;padding:10px 20px;text-decoration:none;transition-duration: 0.5s}
+#headerRightNav li a{text-decoration:none;color:#fff;display:flex;padding:10px 20px;transition-duration: 0.5s;border-radius:4px}
+#headerRightNav li a:hover, #headerRightNav li a:active, #headerRightNav li a.activeRoute{text-decoration:none;text-shadow:1px 1px 2px #5d5d5d;background:#b1b1b1;color:#fff;text-decoration:none;transition-duration: 0.5s}
+
+#headerRightNav li .iconStore{background:url('../../../assets/images/sprite-icon.png') -31px -282px no-repeat; width:15px;height:21px;float:left;}
+#headerRightNav li a:hover .iconStore, 
+#headerRightNav li a:active .iconStore, 
+#headerRightNav li a.activeRoute .iconStore{background-position:-31px -315px}
+
+#headerRightNav li .iconProducts{float:left;background:url('../../../assets/images/sprite-icon.png') -60px -282px  no-repeat; width:26px;height:21px}
+#headerRightNav li a:hover .iconProducts,
+#headerRightNav li a:active .iconProducts,
+#headerRightNav li a.activeRoute .iconProducts{background-position:-60px -315px}
+
+#headerRightNav li .iconBag{background:url('../../../assets/images/sprite-icon.png') -1px -282px no-repeat; width:15px;height:21px;float:left}
+#headerRightNav li a:hover .iconBag,
+#headerRightNav li a:active .iconBag,
+#headerRightNav li a.activeroute .iconBag{background-position:-1px -315px}
+
+#headerRightNav li a span{padding-top:4px;margin-left:5px}
+
 /*MiniCart*/
 #myMiniCart{color:#666;position:fixed;top:60px;right:20px;width:360px;background:#fff;border:1px solid #e5e5e5;padding:10px;z-index:10000}
 #myMiniCart .emptyMiniCart{text-align: center}
@@ -37,20 +55,16 @@ header nav.navbar-inverse:hover{box-shadow:0px 10px 18px 0px #888888;transition-
 MEDIA QUERY
 **********************************/
 @media screen and (max-width: 767px) {
-    
+    .linkTitle{display: none}
+    #headerRightNav{float:right;margin-top:15px}
+    #headerRightNav li a{display:flex;background:transparent}
+    #headerRightNav li a:hover, #headerRightNav li a:active, #headerRightNav li a.activeRoute{text-shadow:1px 1px 2px #5d5d5d;background:transparent;color:#fff}
 }
 @media (max-width:564px){
     .logoWrap{text-align: left; display: block;padding: 10px;}
     .logoWrap a{float:none}
     .navbar-toggle{position: absolute;top:-60px;right:0}
-    #headerRightNav{float:none}
-    #headerRightNav li{display:block;border-right:none;border-bottom: 1px solid #313131}
-    #headerRightNav li:last-child{border-right:none;border-bottom: 1px solid transparent}
-    #headerRightNav li a{color:#fff;display:block;padding:10px 20px;transition-duration: 0.5s;border-radius:4px}
-    #headerRightNav li a:hover{text-shadow:1px 1px 2px #5d5d5d;background:#b1b1b1;color:#fff;display:block;padding:10px 20px;text-decoration:none;transition-duration: 0.5s}
+    #headerRightNav li a{padding:10px}
 
     #myMiniCart {position: fixed;top: 160px;right: 10%;width: 80%}  
 }         
-@media (max-width:425px){
-
-}

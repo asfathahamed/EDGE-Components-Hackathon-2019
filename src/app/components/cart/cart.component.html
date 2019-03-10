@@ -1,6 +1,6 @@
 <div class="row">
 	<div class="col-xs-12">
-		<h1>My Cart <span *ngIf="shoppingItem.length >0">({{ shoppingItem.length }})</span></h1>
+		<h1 class="pageTitle">My Cart <span *ngIf="shoppingItem.length >0">({{ shoppingItem.length }})</span></h1>
 	</div>
 </div>
 <div class="row" *ngIf="shoppingItem.length >0; else emptyCart">
@@ -18,10 +18,8 @@
 				<td>{{ item.name | truncate:[25, '...']}}</td>
 				<td>{{ item.price | currency : 'INR' }}</td>
 				<td>
-					<span *ngIf='item.selectedSize !== "" else standardSize'>{{ item.selectedSize }}</span>									
-					<ng-template #standardSize>
-						<span>Large</span>									
-					</ng-template>
+					<span *ngIf='item.selectedSize'>{{ item.selectedSize }}</span>									
+					<span *ngIf='!item.selectedSize'>Large</span>									
 				</td>
 				<td><a class="iconDelete" (click)="removeCartItem(item)">Delete Item</a></td>
 			</tr>

@@ -1,0 +1,86 @@
+<div class="container">
+  <div class="row outerWrapper">
+    <div class="col-xs-12">
+      <div class="row">
+          <div class="col-xs-12">  
+            <h1 class="pageTitle">Our Store</h1>
+          </div>
+      </div>
+      <div class="row">
+          <div class="col-xs-12">  
+              <div class="col-xs-12">
+                <!-- MAP -->
+                <agm-map 
+                  [latitude]="lat"
+                  [longitude]="lng"
+                  [zoom]="zoom"
+                  [disableDefaultUI]="false"
+                  [zoomControl]="true"
+                  (mapClick)="onSelectLocation($event)"
+                >
+                <!--
+                  ** In stead of Click, use mapClick so that your event connects to maps. 
+                  ** In simple click, it would connect to element only
+                -->
+                  <agm-marker 
+                      *ngFor="let store of markers; let i = index"
+                      [latitude]="store.lat"
+                      [longitude]="store.lng"
+                      [label]="store.label"
+                    >
+                      
+                    <agm-info-window>
+                      <div class="store-info-pane clearfix">
+                        <h4>{{ store.name }}</h4>
+                        <address>
+                          <p>{{ store.address.address1 }}</p>
+                          <p>{{ store.address.city }}, {{ store.address.state }}</p>
+                          <p>{{ store.address.phone }}</p>
+                        </address>
+                      </div>
+                    </agm-info-window>
+                  </agm-marker>
+                </agm-map>
+                <!-- ./MAP-->
+              </div>
+          </div>
+      </div>
+      <div class="row">
+        <div class="col-xs-12">
+          <ul class="store-list">
+            <li *ngFor='let store of markers; let i=index'>
+              <div class="row">
+                <div class="col-xs-4 col-sm-2 marker-wrap">
+                  <span class="iconMarker">{{store.label}}</span>
+                </div>
+                <div class="col-xs-8 col-sm-5">
+                  <h4>{{ store.name }}</h4>
+                  <address>
+                    <p>{{ store.address.address1 }}</p>
+                    <p>{{ store.address.city }}, {{ store.address.state }}</p>
+                    <p>{{ store.address.phone }}</p>
+                  </address>
+                </div>
+                <div class="col-xs-12 col-sm-5">
+                  <button class="btn-view-hours" (click)="store.viewhours = !store.viewhours">
+                    <span *ngIf='!store.viewhours'>View Hours</span>
+                    <span *ngIf='store.viewhours'>Hide Hours</span>
+                  </button>
+                  <ul *ngIf='store.viewhours' class="viewhours">
+                    <li *ngFor='let timing of store.storeHours'>
+                      <div class="row">
+                        <div class="col-xs-4">{{ timing.day }}</div>
+                        <div class="col-xs-8">{{ timing.open }} - {{ timing.close }}</div>
+                      </div>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
