@@ -112,36 +112,52 @@ To preview the rating components [Click here](https://rjomv8kmyo.codesandbox.io/
     
   ### Input:
   ```
-  HalfRating.propTypes = {
+ SHalfRate.propTypes = {
+    size:PropTypes.number,
+    selectedColor:PropTypes.string,
+    emptyColor:PropTypes.string,
+    border:PropTypes.objectOf(verifyBorder),
+    margin:PropTypes.number,
     maxRating:PropTypes.number,
     currentRating:PropTypes.number,
-    updateRating:PropTypes.func.isRequired,
-    selectedColor:PropTypes.string,
-    emptyColor:PropTypes.string
+    updateRating:PropTypes.func.isRequired
 }
+
+border:{
+  borderColor:string,
+  borderStyle:string,
+  borderSize:number
+}
+
+
   ```
   
  ### DefaultValues:
  ```
- HalfRating.defaultProps ={
-    maxRating:5,
-    currentRating:0,
+SHalfRate.defaultProps = {
+    size:50,
     selectedColor:"yellow",
-    emptyColor:"transparent"
+    emptyColor:"transparent",
+    border:{
+        borderColor:"#ccc",
+        borderStyle:"solid",
+        borderSize:1       
+    },
+    margin:5,  
+    maxRating:5,
+    currentRating:0
 }
  ```
  
  ### Listening to events:
  ```
- markRating = (id,name) => {
-       // console.log("MARK --------- ",name );
-        this.setState((oldState) => {
-            let rating;
-            if(name == "rect1")
-                return {currentRating:parseInt(id) - 0.5};
-            return {currentRating:parseInt(id)};
-        }, () => {
-            console.log("Rating ",this.state.currentRating);
+    markRating = (id,cName) => {
+        let currentRating;
+        if(cName == "halfStar"){ currentRating = parseInt(id); }
+        else if(cName == "fullStar"){ currentRating = parseInt(id) - 0.5; }
+
+        this.setState({currentRating:currentRating},() => {
+            console.log(this.state.currentRating);
             this.props.updateRating(this.state.currentRating);
         })
     }
@@ -155,4 +171,5 @@ To preview the rating components [Click here](https://rjomv8kmyo.codesandbox.io/
    styled-components
    @material-ui/core/Tooltip
    @material-ui/core/Zoom  
+   
  ```
