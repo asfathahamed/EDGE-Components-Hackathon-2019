@@ -1,6 +1,8 @@
 import React, { Component, Fragment } from 'react';
 import styled from "styled-components";
 import PropTypes from "prop-types";
+import Tooltip from '@material-ui/core/Tooltip';
+import Zoom from '@material-ui/core/Zoom';
 
 const assignBorder = (props) => {
     return props.borderSize + "px " + props.borderStyle + " " + props.borderColor; 
@@ -51,7 +53,7 @@ const StyleWrapper = styled.div`
     }
 `
 
-class SHalfRate extends Component{ 
+class HalfRating extends Component{ 
     maxRating = parseInt(this.props.maxRating);
     cssProps = {
         selectedColor:this.props.selectedColor,
@@ -83,15 +85,10 @@ class SHalfRate extends Component{
 
     markRating = (id,cName) => {
         let currentRating;
-        if(cName == "halfStar"){
-            currentRating = parseInt(id);
-        }else if(cName == "fullStar"){
-            currentRating = parseInt(id) - 0.5;
-        }
+        if(cName == "halfStar"){ currentRating = parseInt(id); }
+        else if(cName == "fullStar"){ currentRating = parseInt(id) - 0.5; }
 
-        this.setState({
-            currentRating:currentRating
-        },() => {
+        this.setState({currentRating:currentRating},() => {
             console.log(this.state.currentRating);
             this.props.updateRating(this.state.currentRating);
         })
@@ -116,10 +113,16 @@ class SHalfRate extends Component{
             let classes = this.addRating(i);
 
             arr.push(<Fragment key={i-1}>
-                <div className={"halfStar " + classes[0] } id={a}
-                    onClick={(event) => this.markRating(event.currentTarget.id,"halfStar")}></div>
-                <div className={"fullStar " + classes[1]} id={a}
-                    onClick={(event) => this.markRating(event.currentTarget.id,"fullStar")}></div>
+                <Tooltip title={i} placement="top-end" TransitionComponent={Zoom}>
+                    <div className={"halfStar " + classes[0] } id={a}
+                        onClick={(event) => this.markRating(event.currentTarget.id,"halfStar")}></div>
+                </Tooltip>
+                
+                <Tooltip title={i - 0.5} placement="top-start" TransitionComponent={Zoom}>
+                    <div className={"fullStar " + classes[1]} id={a}
+                        onClick={(event) => this.markRating(event.currentTarget.id,"fullStar")}></div>
+                </Tooltip>
+                
             </Fragment>)
         }       
         return arr;
@@ -132,7 +135,7 @@ class SHalfRate extends Component{
     }
 }
 
-export default SHalfRate;
+export default HalfRating;
 
 const verifyBorder = (propValue,key,compName,location,propFullName) => {
     let type = typeof(propValue[key]);
@@ -149,7 +152,7 @@ const verifyBorder = (propValue,key,compName,location,propFullName) => {
     }   
 }
 
-SHalfRate.propTypes = {
+HalfRating.propTypes = {
     size:PropTypes.number,
     selectedColor:PropTypes.string,
     emptyColor:PropTypes.string,
@@ -160,7 +163,7 @@ SHalfRate.propTypes = {
     updateRating:PropTypes.func.isRequired
 }
 
-SHalfRate.defaultProps = {
+HalfRating.defaultProps = {
     size:50,
     selectedColor:"yellow",
     emptyColor:"transparent",
@@ -176,6 +179,3 @@ SHalfRate.defaultProps = {
 
 
 
-/* borderColor:PropTypes.string,
-borderSize:PropTypes.number,
-borderStyle:PropTypes.string */
