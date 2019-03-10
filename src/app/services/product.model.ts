@@ -12,7 +12,7 @@ export class Product{
     public getProductList: number;
 
 
-constructor(
+/* constructor(
     id: number,name: string,getUpdatedTotalPrice:number,price: number,getProductList:any,size: any,qty: number, getQty: number,totalItemPrice: number,totalPrice: number,imagePath: string
     )
     {
@@ -27,5 +27,5 @@ constructor(
         this.totalPrice = totalPrice;
         this.imagePath = imagePath;
         this.getProductList = getProductList;
-    }
+    } */
 }
