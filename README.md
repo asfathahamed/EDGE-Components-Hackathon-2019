@@ -27,8 +27,7 @@
 <IdleTimeout
     message="Idle time logged out"
     secsToLogout={10}
-    timeOutHandler={handleTimeOut}
->
+    timeOutHandler={handleTimeOut}>
     <div>
         This is a component which uses IdleTimeout.
     </div>
