@@ -1,0 +1,42 @@
+body {
+  height: 100vh;
+  background-color: black;
+}
+.heading {
+  color: white;
+}
+.ratingComponent {
+  width: auto;
+}
+.text-center {
+  text-align: center;
+}
+.rating {
+  line-height: 1;
+  display: inline-block;
+}
+.ratingItem {
+  display: inline;
+  font-size: 0;
+}
+.ratingItem::before {
+  font-size: 1.5rem;
+  content: "★";
+  color: lightgray;
+}
+.ratingInput {
+  position: absolute;
+  visibility: hidden;
+}
+
+.rating:hover .ratingItem::before {
+  color: yellow;
+}
+
+.ratingItem:hover ~ .ratingItem::before {
+  color: lightgray;
+}
+
+.ratingItemSelected::before {
+  color: yellow;
+}
