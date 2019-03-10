@@ -1,4 +1,4 @@
-#IdleTimeOut
+# IdleTimeOut
 
 ## Description
    -----------
@@ -9,7 +9,7 @@
 * You can pass timeOutHandler, which will be called when idle time out by passing callback. If this callback is called then it will restart the      time again.
 
 
-##props
+## props
 
 |        Property        |                                                                   Description                                                                  |                                    Default Value                                   |   type   |             Mandatory             |
 |:----------------------:|:----------------------------------------------------------------------------------------------------------------------------------------------:|:----------------------------------------------------------------------------------:|:--------:|:---------------------------------:|
@@ -22,19 +22,20 @@
 | showIdleTimeLeft       | This will show the count down timer at top right corner of the screen.                                                                         | false                                                                              | bool     | No                                |
 | showIdleTimeLeftBefore | Decides when countdownTimer to be shown. This will be shown only when showIdleTimeLeft is true                                                 | Considers either minsToLogout or secsToLogout                                      | number   | No                                |
 
-##Example:- 
+## Example:- 
 
+```javascript
 <IdleTimeout
     message="Idle time logged out"
     secsToLogout={10}
-    timeOutHandler={handleTimeOut}
->
+    timeOutHandler={handleTimeOut}>
     <div>
         This is a component which uses IdleTimeout.
     </div>
 </IdleTimeout>
+```
 
-##Steps to run an example
+## Steps to run an example
 
 - npm i
 - npm start
