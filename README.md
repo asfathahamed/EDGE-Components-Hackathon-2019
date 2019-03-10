@@ -124,9 +124,9 @@ To preview the rating components [Click here](https://rjomv8kmyo.codesandbox.io/
 }
 
 border:{
-  borderColor:string,
-  borderStyle:string,
-  borderSize:number
+    borderColor:string,
+    borderStyle:string,
+    borderSize:number
 }
 
 
