@@ -24,14 +24,16 @@
 
 ## Example:- 
 
-```<IdleTimeout
+```javascript
+<IdleTimeout
     message="Idle time logged out"
     secsToLogout={10}
     timeOutHandler={handleTimeOut}>
     <div>
         This is a component which uses IdleTimeout.
     </div>
-</IdleTimeout>```
+</IdleTimeout>
+```
 
 ## Steps to run an example
 
