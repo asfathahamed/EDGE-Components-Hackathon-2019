@@ -1,0 +1,152 @@
+[
+{
+    "lat"       : 28.599946460128677,
+    "lng"       : 77.33907244048214,
+    "label"     : "A",
+    "name"  :   "Creative Eye Gallery",
+    "address"   : {
+       "address1":  "C-134-B, Wave Mall",
+       "city":  "Noida",
+       "state":  "Uttar Pradesh",
+       "phone":  "981000000"
+    },
+    "storeHours"   : [
+        {
+        "day"  :   "Sunday",
+        "open"  :  "10:00 AM",
+        "close"  :  "6:30 PM"
+        },
+        {
+        "day"  :   "Monday",
+        "open"  :  "10:00 AM",
+        "close"  :  "6:30 PM"
+        },
+        {
+        "day"  :   "Tuesday",
+        "open"  :  "10:00 AM",
+        "close"  :  "6:30 PM"
+        },
+        {
+        "day"  :   "Wednesday",
+        "open"  :  "10:00 AM",
+        "close"  :  "6:30 PM"
+        },
+        {
+        "day"  :   "Thursday",
+        "open"  :  "10:00 AM",
+        "close"  :  "6:30 PM"
+        },
+        {
+        "day"  :   "Friday",
+        "open"  :  "10:00 AM",
+        "close"  :  "6:30 PM"
+        },
+        {
+        "day"  :   "Saturday",
+        "open"  :  "10:00 AM",
+        "close"  :  "6:30 PM"
+        }
+    ],
+    "draggable" : false
+},
+{
+    "lat"       : 28.568136573200515, 
+    "lng"       : 77.24365054558803,
+    "label"     : "B",
+    "name"      :   "Creative Eye India",
+    "address"   : {
+       "address1"   :  "Lajpat Nagar",
+       "city"       :  "Delhi",
+       "state"      :  "",
+       "phone"      :  "981000000"
+    },
+    "storeHours"   : [
+        {
+        "day"  :   "Sunday",
+        "open"  :  "10:00 AM",
+        "close"  :  "6:30 PM"
+        },
+        {
+        "day"  :   "Monday",
+        "open"  :  "10:00 AM",
+        "close"  :  "6:30 PM"
+        },
+        {
+        "day"  :   "Tuesday",
+        "open"  :  "10:00 AM",
+        "close"  :  "6:30 PM"
+        },
+        {
+        "day"  :   "Wednesday",
+        "open"  :  "10:00 AM",
+        "close"  :  "6:30 PM"
+        },
+        {
+        "day"  :   "Thursday",
+        "open"  :  "10:00 AM",
+        "close"  :  "6:30 PM"
+        },
+        {
+        "day"  :   "Friday",
+        "open"  :  "10:00 AM",
+        "close"  :  "6:30 PM"
+        },
+        {
+        "day"  :   "Saturday",
+        "open"  :  "10:00 AM",
+        "close"  :  "6:30 PM"
+        }
+    ],
+    "draggable" : false
+},
+{
+    "lat"       : 28.504901974894562,
+    "lng"       : 77.0969009399414,
+    "label"     : "C",
+    "name"      :   "Creative Eye India",
+    "address"   : {
+       "address1"   :  "Ambience Mall, NH 8",
+       "city"       :  "Gurugram",
+       "state"      :  "Haryana",
+       "phone"      :  "981000000"
+    },
+    "storeHours"   : [
+        {
+        "day"  :   "Sunday",
+        "open"  :  "10:00 AM",
+        "close"  :  "6:30 PM"
+        },
+        {
+        "day"  :   "Monday",
+        "open"  :  "10:00 AM",
+        "close"  :  "6:30 PM"
+        },
+        {
+        "day"  :   "Tuesday",
+        "open"  :  "10:00 AM",
+        "close"  :  "6:30 PM"
+        },
+        {
+        "day"  :   "Wednesday",
+        "open"  :  "10:00 AM",
+        "close"  :  "6:30 PM"
+        },
+        {
+        "day"  :   "Thursday",
+        "open"  :  "10:00 AM",
+        "close"  :  "6:30 PM"
+        },
+        {
+        "day"  :   "Friday",
+        "open"  :  "10:00 AM",
+        "close"  :  "6:30 PM"
+        },
+        {
+        "day"  :   "Saturday",
+        "open"  :  "10:00 AM",
+        "close"  :  "6:30 PM"
+        }
+    ],
+    "draggable" : false
+}
+]
