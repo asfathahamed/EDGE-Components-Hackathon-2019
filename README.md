@@ -5,7 +5,7 @@ The Notification and Badge Component is useful alert boxes used quite often to s
 
 
 <p align="center">
-  <img width="800" height="400" src="EDGE-Components-Hackathon-2019/Notification & Badge.png">
+  <img width="800" height="400" src="https://github.com/ERS-HCL/EDGE-Components-Hackathon-2019/blob/ERSEDGE022019009/Notification%20%26%20Badge.png">
 </p>
 
 ### To preview demo of Notification and Badge Component, [Click here](https://angular-zaiy2u.stackblitz.io/)
