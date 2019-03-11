@@ -2,13 +2,13 @@
 <mat-dialog-content class="mat-typography">
     <mat-form-field
     [hideRequiredMarker]=false 
-    [floatLabel]="auto">
+    floatLabel="auto">
       <input matInput [(ngModel)]="user.name" placeholder="Name" required>
     </mat-form-field>
     <br>
     <mat-form-field
     [hideRequiredMarker]=false 
-    [floatLabel]="auto">
+    floatLabel="auto">
       <input matInput [(ngModel)]="user.comment" placeholder="Comment" required>
     </mat-form-field>
 </mat-dialog-content>
