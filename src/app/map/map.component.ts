@@ -39,6 +39,7 @@ export class MapComponent implements OnInit, OnChanges {
       this.showLoader = true;
       this.showPlace = false;
       this.removePlaceMarker(null);
+      this.removeMarker(null);
       this.getDirections().then(() => {
         this.showLoader = false;
       });
@@ -47,7 +48,7 @@ export class MapComponent implements OnInit, OnChanges {
       this.search =  this.placeType.toUpperCase();
       this.directionsDisplay.set('directions', null);
       this.showLoader = true;
-      this.showPlace = true;
+      this.isPopularPlace ? this.showPlace = true : this.showPlace = false;
       setTimeout(() => {this.getLocation(this.location).then(() => {
         this.showLoader = false;
       });
@@ -129,15 +130,8 @@ export class MapComponent implements OnInit, OnChanges {
 
   getLocation(location) {
     return new Promise((resolve, reject) => {
-      let getNextPage = null;
-      let moreButton;
       if (this.isPopularPlace) {
-      moreButton = (document.getElementById('more') as HTMLInputElement);
       document.getElementById('places').innerHTML = '';
-      moreButton.onclick = function () {
-        moreButton.disabled = true;
-        if (getNextPage) { getNextPage(); }
-      };
     }
       this.showLoader = true;
       const placeRequest = {
@@ -198,10 +192,6 @@ export class MapComponent implements OnInit, OnChanges {
               bounds.extend(place.geometry.location);
             }
             map.fitBounds(bounds);
-            moreButton.disabled = !pagination.hasNextPage;
-            getNextPage = pagination.hasNextPage && function () {
-              pagination.nextPage();
-            };
           });
         }
         resolve();
