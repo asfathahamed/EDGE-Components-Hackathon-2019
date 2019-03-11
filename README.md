@@ -71,6 +71,12 @@ As you use typesting in your Angular application, directly you cant you the Goog
 
 For this application `@types/google-maps`is being used.
 
+#### Step 3 ( Without installing typings )
+
+There is also an alternative way to avoiding typing error is by using declare key word as mentioned below,
+
+  `declare var google: any;`
+
 #### Step 4 ( How to use the component )
 
 To use this component you can use *<locate-on-map>* in your any of the parent component. And you can follow the attribute section for proving the inputs to the component. The component looks as provided below,
