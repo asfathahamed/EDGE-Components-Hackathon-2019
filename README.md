@@ -6,6 +6,7 @@ Locate on Map is a web component developed using angular 7 and bootstrap which i
 
 ![alt text](img/Maps.jpg)
 
+### Map directions
 ![alt text](img/MapsDirections.jpg)
 
 ## Getting Started
