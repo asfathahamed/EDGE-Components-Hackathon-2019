@@ -9,6 +9,8 @@ import { FilterByPipe } from './smart-table/filter-by.pipe';
 import { PaginationComponent } from './pagination/pagination.component';
 import { TimeoutComponent } from './timeout/timeout.component';
 import { LocateOnMapComponent } from './locate-on-map/locate-on-map.component';
+import { Angular2CsvModule } from 'angular2-csv';
+import { ExportAsModule } from 'ngx-export-as';
 
 @NgModule({
   declarations: [
@@ -22,7 +24,9 @@ import { LocateOnMapComponent } from './locate-on-map/locate-on-map.component';
   ],
   imports: [
     BrowserModule,
-    FormsModule
+    FormsModule,
+    Angular2CsvModule,
+    ExportAsModule 
   ],
   providers: [],
   bootstrap: [AppComponent]

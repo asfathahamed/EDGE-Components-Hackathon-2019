@@ -1,9 +1,9 @@
 <div class="paginator-container" *ngIf="paginationStyle === 'nextprev'">
   <div class="prev flex-one" *ngIf="nextPrevOption === 'opposite'">
-    <button (click)="prev()" [disabled]="pageInfo.dataFrom <= 1">Prev</button>
+    <button class="p-btn" (click)="prev()" [disabled]="pageInfo.dataFrom <= 1">Prev</button>
   </div>
   <div class="item-group flex-one">
-    <select #itemPerPage (change)="setItemsPerPage(itemPerPage.value)">
+    <select class="b-input" #itemPerPage (change)="setItemsPerPage(itemPerPage.value)">
       <option *ngFor="let itemPerPage of itemsPerPages;" [value]="itemPerPage" [selected]="itemPerPage === selectedItemsPerPage">{{itemPerPage}}</option>
     </select>
   </div>
@@ -11,11 +11,11 @@
     {{pageInfo?.dataFrom}} - {{pageInfo?.dataTo}} of {{dataLength}} 
   </div>
   <div class="next-prev flex-one" *ngIf="nextPrevOption === 'combine'">
-      <button (click)="prev()" [disabled]="pageInfo.dataFrom <= 1">Prev</button>
-      <button (click)="next()" [disabled]="pageInfo.dataFrom >= pageInfo.dataLength - pageInfo.itemsPerPage">Next</button>
+      <button class="p-btn" (click)="prev()" [disabled]="pageInfo.dataFrom <= 1">Prev</button>
+      <button class="p-btn" (click)="next()" [disabled]="pageInfo.dataFrom >= pageInfo.dataLength - pageInfo.itemsPerPage">Next</button>
   </div>
   <div class="next flex-one" *ngIf="nextPrevOption === 'opposite'">
-    <button (click)="next()" [disabled]="pageInfo.dataFrom >= pageInfo.dataLength - pageInfo.itemsPerPage">Next</button>
+    <button class="p-btn right" (click)="next()" [disabled]="pageInfo.dataFrom >= pageInfo.dataLength - pageInfo.itemsPerPage">Next</button>
   </div>
 </div>
 <div class="paginator-container" *ngIf="paginationStyle === 'number'">

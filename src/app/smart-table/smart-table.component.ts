@@ -1,4 +1,5 @@
-import { Component, OnInit, ChangeDetectorRef } from '@angular/core';
+import { Component, OnInit, ChangeDetectorRef, ViewChild } from '@angular/core';
+import { ExportAsService, ExportAsConfig } from 'ngx-export-as';
 
 @Component({
   selector: 'app-smart-table',
@@ -6,6 +7,8 @@ import { Component, OnInit, ChangeDetectorRef } from '@angular/core';
   styleUrls: ['./smart-table.component.css']
 })
 export class SmartTableComponent implements OnInit {
+
+  @ViewChild('jsonToCSV') jsonToCSV: any;
 
   list: any[] = orderList;
   headers: any[] = headers;
@@ -15,10 +18,61 @@ export class SmartTableComponent implements OnInit {
   orderByKey: string;
   pagination;
   pagedData: any = [];
+  toggleSettings: boolean = false;
+  toggleExport: boolean = false;
+  filteredHeader: any[] = [];
+  tableStyles: any[] = tableStyle;
+  tStyle: string = 'basic';
+  textAligns: any[] = aligns;
+  textAlign: string = 'center';
+  headerType: string = '';
+  tableThemes:any[] = themes;
+  tableTheme: string = 'themeLight';
+  csvOptions: any = {
+    fieldSeparator: ',',
+    quoteStrings: '"',
+    decimalseparator: '.',
+    showLabels: false,
+    headers: [],
+    showTitle: false,
+    title: '',
+    useBom: false,
+    removeNewLines: true,
+    keys: []
+  };
 
-  constructor( private cdRef : ChangeDetectorRef) { }
+  exportAsConfig: any = {
+    exportToImage: {
+      type: 'png',
+      elementId: 'smartTable'
+    },
+    exportToDoc: {
+      type: 'docx',
+      elementId: 'smartTable',
+      options: {
+        orientation: 'landscape',
+        margins: {
+          top: '20'
+        }
+      }
+    },
+    exportToPdf: {
+      type: 'pdf',
+      elementId: 'smartTable',
+      options: {
+        orientation: 'landscape',
+        margins: {
+          top: '20'
+        }
+      }
+    }
+  }
+
+  constructor( private cdRef : ChangeDetectorRef, private exportAsService: ExportAsService) { }
 
   ngOnInit() {
+    this.filteredHeader = this.headers.filter( header => header.checked );
+    this.updateCsvHeaders(headers);
   }
 
   displaySortArrow(hKey: string){
@@ -37,23 +91,110 @@ export class SmartTableComponent implements OnInit {
     this.cdRef.detectChanges();
   }
 
+  openForm() {
+    this.toggleSettings = !this.toggleSettings;
+    if(this.toggleSettings){
+      this.toggleExport = false;
+    }
+  }
+
+  openExportPopUp(){
+    this.toggleExport = !this.toggleExport;
+    if(this.toggleExport){
+      this.toggleSettings = false;
+    }
+  }
+
+  toggleHeaderColumn(header){
+    this.filteredHeader = this.headers.filter( header => header.checked );
+    this.headers = this.headers.filter(h => { 
+      if(header.key === h.key){
+        h.checked = !header.checked; 
+      }
+      return h;
+      });
+    this.updateCsvHeaders(this.headers);
+  }
+
+  updateCsvHeaders(headers){
+    let csvHeaderKeys = []
+    let csvHeadervalues = []
+    headers.forEach(element => {
+      if(element.checked){
+        csvHeaderKeys.push(element.key); 
+        csvHeadervalues.push(element.value);
+      }
+    });
+    this.csvOptions.keys = csvHeaderKeys;
+    this.csvOptions.headers = csvHeadervalues;
+  }
+
+  onExportToCSV(){
+    this.jsonToCSV.onDownload();
+  }
+
+  onExport(exportType) {
+    // download the file using old school javascript method
+    this.exportAsService.save(this.exportAsConfig[exportType], 'Export_to_Image');
+  }
 }
+
+export const themes = [{
+  key: 'themeDark',
+  value: 'Dark'
+},{
+  key: 'themeLight',
+  value: 'Light'
+},{
+  key: 'themeLightBlue',
+  value: 'Light Blue'
+}];
+
+export const aligns = [{
+  key: 'left',
+  value: 'Left'
+},{
+  key: 'right',
+  value: 'Right'
+},{
+  key: 'center',
+  value: 'Center'
+}];
+
+export const tableStyle = [{
+  key: 'basic',
+  value: 'Basic'
+},{
+  key: 'bordered',
+  value: 'Bordered'
+},{
+  key: 'hover',
+  value: 'Hover Rows'
+},{
+  key: 'stripped',
+  value: 'Stripped'
+}];
 
 export const headers = [{
   key: 'accessioningId',
-  value: 'Accessioning Id'
+  value: 'Accessioning Id',
+  checked: true
 },{
   key: 'orderId',
-  value: 'Order Id'
+  value: 'Order Id',
+  checked: true
 },{
   key: 'workflowType',
-  value: 'Workflow Type'
+  value: 'Workflow Type',
+  checked: true
 },{
   key: 'assaytype',
-  value: 'Assay type'
+  value: 'Assay type',
+  checked: true
 },{
   key: 'workflowStatus',
-  value: 'Workflow Status'
+  value: 'Workflow Status',
+  checked: true
 }];
 
 export const orderList = [{
