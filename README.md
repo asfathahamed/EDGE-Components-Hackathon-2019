@@ -29,8 +29,9 @@ You may want to have a look at the demo : https://staticassets-bd560.firebaseapp
 3. Fetching and adding comments for aour sample post. 
 ![alt text](https://github.com/ERS-HCL/EDGE-Components-Hackathon-2019/blob/ERSEDGE022019032/src/assets/code_walk1.PNG)
 
-## Server Code
-There is also /server folder, which contains the sample server code to demonstrate the server behaviour. This can be modified to save/fetch the file to/from the desired location.
+## Firebase database console
+![alt text](https://github.com/ERS-HCL/EDGE-Components-Hackathon-2019/blob/ERSEDGE022019032/src/assets/firebase_data_console.PNG)
+
 
 ## Development server
 Run `npm start` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
