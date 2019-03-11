@@ -4,13 +4,10 @@
 A reusable component to start commenting and replying on earlier comments for any post/article/product_review. A completely real-time component with the use of Google's Firebase Cloud Firestore, which makes this component superfast and real-time. 
 
 ## Add new comment:
-![alt text](https://github.com/AshuHCL/angular-file-upload-component/blob/master/assets/startUploading.PNG)
+![alt text](https://github.com/ERS-HCL/EDGE-Components-Hackathon-2019/blob/ERSEDGE022019032/src/assets/commenting_system_2.PNG)
 
 ## View comments
-![alt text](https://github.com/AshuHCL/angular-file-upload-component/blob/master/assets/endUploading.PNG)
-
-## Network XHR calls to send the uploading file/s as binary
-![alt text](https://github.com/AshuHCL/angular-file-upload-component/blob/master/assets/NetworkRequest.PNG)
+![alt text](https://github.com/ERS-HCL/EDGE-Components-Hackathon-2019/blob/ERSEDGE022019032/src/assets/commenting_system_1.PNG)
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 6.0.8.
 
