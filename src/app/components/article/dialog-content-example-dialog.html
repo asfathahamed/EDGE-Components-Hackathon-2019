@@ -1,0 +1,18 @@
+<h2 mat-dialog-title>Add your comment</h2>
+<mat-dialog-content class="mat-typography">
+    <mat-form-field
+    [hideRequiredMarker]=false 
+    [floatLabel]="auto">
+      <input matInput [(ngModel)]="user.name" placeholder="Name" required>
+    </mat-form-field>
+    <br>
+    <mat-form-field
+    [hideRequiredMarker]=false 
+    [floatLabel]="auto">
+      <input matInput [(ngModel)]="user.comment" placeholder="Comment" required>
+    </mat-form-field>
+</mat-dialog-content>
+<mat-dialog-actions align="end">
+  <button mat-button mat-dialog-close>Cancel</button>
+  <button mat-button [mat-dialog-close]="user" cdkFocusInitial>Post Comment</button>
+</mat-dialog-actions>

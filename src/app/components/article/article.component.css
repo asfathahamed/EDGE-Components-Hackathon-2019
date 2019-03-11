@@ -1,0 +1,10 @@
+.example-card {
+    max-width: 100%;
+    height: 250px;
+  }
+  
+  .example-header-image {
+    background-image: url("/assets/round-bookmarks-24px.svg");
+    background-size: cover;
+  }
+  
