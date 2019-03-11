@@ -7,11 +7,13 @@ This project features these components:
 ### Component Dependencies
 #### Rating & Review 
 
-No dependency. You need to use "rating" component in the project.
+- No dependency. 
+- You need to use "rating" component in the project.
 
 #### Google Map
 
-You need to use "store-locator" component in the project.
+- You need to use "store-locator" component in the project.
+
 ```
 npm install @agm/core --save
 ```
