@@ -1,7 +1,7 @@
 # Angular Commenting-System Component
 
 ## Description
-A reusable component to start commenting and replying on earlier comments for any post/article/product_review. A completely real-time component with the use of Google's Firebase Cloud Firestore, which makes this component superfast and real-time. 
+A reusable component using Google's Firebase and Angular Material design to start commenting and replying on earlier comments for any post/article/product_review. A completely real-time component with the use of Google's Firebase Cloud Firestore, which makes this component superfast and real-time. 
 
 ## Add new comment:
 ![alt text](https://github.com/ERS-HCL/EDGE-Components-Hackathon-2019/blob/ERSEDGE022019032/src/assets/commenting_system_2.PNG)
