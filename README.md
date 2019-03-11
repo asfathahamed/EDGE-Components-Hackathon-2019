@@ -46,7 +46,6 @@ https://hackathon007.stackblitz.io
 Copyright@author
 
 ## Test cases
-The word file is attached.
 
 ### Store Locator (Google Map)
 
