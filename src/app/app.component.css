@@ -28,15 +28,6 @@
     height: 82px;
     display:flex;
 }
-.leftText {
-    font-family:"Helvetica Neue",Helvetica, Arial, sans-serif;
-}
-.centerHeading {
-    font-family:"Helvetica Neue",Helvetica, Arial, sans-serif;
-    font-weight:bold;
-    font-style:normal;
-    font-size:34px;
-}
 .custom-select{
   /* wrapper style */
   position: relative;
