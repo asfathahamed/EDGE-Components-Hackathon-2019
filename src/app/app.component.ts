@@ -17,7 +17,7 @@ export class AppComponent implements OnInit {
 
   ngOnInit() {
     this.selectedType = 'location';
-    this.isPopularPlace = true;
+    this.isPopularPlace = false;
     this.placeType = 'hospital';
     this.btnText = 'Get Location';
   }
@@ -30,5 +30,11 @@ export class AppComponent implements OnInit {
   typeChange(changedValue) {
     this.selectedType = changedValue;
     this.btnText = (changedValue === 'direction') ? 'Get Directions' : 'Get Location';
+  }
+
+  nearPlaceChange(changedValue) {
+    this.isPopularPlace  = changedValue;
+    this.placeText = (<HTMLInputElement>document.getElementById('fromLocation')).value;
+    this.toLocation = (this.selectedType === 'direction') ? (<HTMLInputElement>document.getElementById('toLocation')).value : '';
   }
 }
