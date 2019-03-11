@@ -1,6 +1,8 @@
-# Hackathon 2019 (Component: Review and ratings)
+# Hackathon 2019 
 
-
+This project features these components:
+1. Rating & review
+2. Google Map
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 6.0.8.
 
