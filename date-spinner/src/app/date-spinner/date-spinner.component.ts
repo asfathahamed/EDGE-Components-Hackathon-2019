@@ -1,10 +1,10 @@
-import { Component, OnInit, Renderer2, Input, Output, EventEmitter } from '@angular/core';
-import { AngularWaitBarrier } from 'blocking-proxy/built/lib/angular_wait_barrier';
+import { Component, OnInit, Renderer2, Input, Output, EventEmitter, HostListener, ElementRef, ViewEncapsulation} from '@angular/core';
 
 @Component({
   selector: 'app-date-spinner',
   templateUrl: './date-spinner.component.html',
-  styleUrls: ['./date-spinner.component.css']
+  styleUrls: ['./date-spinner.component.css'],
+  encapsulation: ViewEncapsulation.Emulated
 })
 export class DateSpinnerComponent implements OnInit {
   @Input() public startYear: number;
@@ -22,7 +22,7 @@ export class DateSpinnerComponent implements OnInit {
   public top;
   public left;
   public selectedElement: any;
-  constructor(private renderer: Renderer2) { }
+  constructor(private renderer: Renderer2, private eRef: ElementRef) { }
 
   ngOnInit() {
     this.selectedMonth = this.currentMonth < 10 ? '0' + this.currentMonth : this.currentMonth;
@@ -164,5 +164,13 @@ export class DateSpinnerComponent implements OnInit {
     }
     this.showAll = false;
     this.updateDay();
+  }
+
+  @HostListener('document:click', ['$event'])
+  hideDropdown(event: any) {
+    if (event.target.id === 'year' || event.target.id === 'month' || event.target.id === 'date') {
+    } else {
+      this.showAll = false;
+    }
   }
 }
