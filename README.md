@@ -20,7 +20,14 @@ You may want to have a look at the demo : https://staticassets-bd560.firebaseapp
 3. Run "npm start" and your application will start in your default browser at "localhost:4200"
 
 ## Code walkthrough
-![alt text](https://github.com/AshuHCL/angular-file-upload-component/blob/master/assets/codeWalthrough.PNG)
+1. Importing Angular Material and firebase modules to our application 
+![alt text](https://github.com/ERS-HCL/EDGE-Components-Hackathon-2019/blob/ERSEDGE022019032/src/assets/code_walk2.PNG)
+
+2. Configuring firebase in our angular application 
+![alt text](https://github.com/ERS-HCL/EDGE-Components-Hackathon-2019/blob/ERSEDGE022019032/src/assets/code_walk3.PNG)
+
+3. Fetching and adding comments for aour sample post. 
+![alt text](https://github.com/ERS-HCL/EDGE-Components-Hackathon-2019/blob/ERSEDGE022019032/src/assets/code_walk1.PNG)
 
 ## Server Code
 There is also /server folder, which contains the sample server code to demonstrate the server behaviour. This can be modified to save/fetch the file to/from the desired location.
