@@ -18,3 +18,5 @@ Download the foler and install the required packages and run the application.
 ```
 > ng serve
 ``` 
+
+### Demo: https://manishsingh-xyz.github.io/PasswordValidator/
