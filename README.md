@@ -9,7 +9,7 @@ if user scroll the webpage video also scroll as per user requirement.
   
 
 
-To preview demo of Time Out Component [click here](https://stackblitz.com/edit/angular-egsoov?file=src%2Fapp%2Fapp.component.html)
+To preview demo of Time Out Component [click here](https://angular-egsoov.stackblitz.io/)
 
 
 ## Getting Started
