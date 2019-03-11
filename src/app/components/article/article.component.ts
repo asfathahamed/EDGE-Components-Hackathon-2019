@@ -12,7 +12,6 @@ export class ArticleComponent implements OnInit {
 
   items: Observable<any[]>;
   constructor(public db: AngularFirestore, public dialog: MatDialog) {
-    console.log(db.collection("items").valueChanges());
     this.items = db.collection('items').valueChanges();
   }
 
@@ -25,11 +24,13 @@ export class ArticleComponent implements OnInit {
       }
     });
   }
-
   ngOnInit() {
+  
   }
-
 }
+
+
+
 
 @Component({
   selector: 'dialog-content-example-dialog',
