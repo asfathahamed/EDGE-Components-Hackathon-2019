@@ -20,3 +20,6 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 You may want to have a look at the demo 
 
 https://hackathon007.stackblitz.io
+
+## Images
+Copyright@author
