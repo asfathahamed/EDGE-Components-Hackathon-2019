@@ -7,6 +7,14 @@ This project contains below components for the hackathon challenge 2019,
 - Pagination
 - Table component
 
+### Demo Links
+
+[Locate me on map - without image gallery](https://locate-on-map-without-gallery.stackblitz.io/)
+
+[Locate me on map - with image gallery](https://locate-on-map-lyuyrx.stackblitz.io/)
+
+
+
 ### Component 1: Locate on map
 
 Using this component user can search the places and can view the places on the map with various *icon*, *photos near by*, *address details*, *rating*, *review*, etc.
