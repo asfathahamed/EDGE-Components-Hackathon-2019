@@ -12,7 +12,7 @@ A reusable component to start commenting and replying on earlier comments for an
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 6.0.8.
 
 ## Demo
-You may want to have a look at the demo : https://staticassets-bd560.firebaseapp.com/
+You may want to have a look at the demo : https://angular-commenting-app.firebaseapp.com/
 
 ## Steps to start the application locally
 1. Clone the application
