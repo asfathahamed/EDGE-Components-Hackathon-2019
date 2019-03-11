@@ -14,5 +14,10 @@
 </mat-dialog-content>
 <mat-dialog-actions align="end">
   <button mat-button mat-dialog-close>Cancel</button>
-  <button mat-button [mat-dialog-close]="user" cdkFocusInitial>Post Comment</button>
+  <button mat-button 
+  [mat-dialog-close]="user" 
+  [disabled]="user.name==='' || user.comment===''" 
+  cdkFocusInitial>
+    Post Comment
+  </button>
 </mat-dialog-actions>
