@@ -20,4 +20,4 @@ This is dynamic table component, which populates table header and body based on 
 * Run `npm install` 
 * Run `ng serve`
 
-<img src="images/tableComponent.png"/>
+<img src="images/tableCompoenent.png"/>
