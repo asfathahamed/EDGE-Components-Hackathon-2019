@@ -1,8 +1,8 @@
 # EDGE-Components-Hackathon-2019
 
-# Generic Table Component
+# Generic Angular Table Component
 
-This is dynamic table component, automatically can be populated table header and body based on the given data.
+This is dynamic table component, which populates table header and body based on the given data.
 
 ## Live demo
 
