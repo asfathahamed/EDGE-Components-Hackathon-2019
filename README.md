@@ -19,3 +19,5 @@ This is dynamic table component, which populates table header and body based on 
 * Clone the repository
 * Run `npm install` 
 * Run `ng serve`
+
+<img src="images/tableComponent.png"/>
