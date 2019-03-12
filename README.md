@@ -37,10 +37,11 @@ You will also see any lint errors in the console.
 | countDownShow | boolean | If remaining session time has to be showed in circular timer format |
 | progressBarShow | boolean | If remaining session time has to be showed in progress bar format |
 | frame | boolean | If the modal has to be shown at top/Bottom (position) with full width |
-| size | boolean | If the modal has to be shown at Top-Left, Top-Right,  Bottom-Right, Bottom-Left(position) with normal size |
+| side | boolean | If the modal has to be shown at Top-Left, Top-Right,  Bottom-Right, Bottom-Left(position) with normal size |
 | position | text | Refer frame, size properties of possible values |
 | backdrop | boolean | If there has to be overlay background to the modal |
 | centered | boolean | If the modal has to be shown in center position. Make it false it size or frame position is used. |
+| size | text | Large size - lg, Small size - sm. Medium size - md is default.
 
 3. Include the component in whichever page it is needed.
 
