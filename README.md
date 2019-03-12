@@ -16,7 +16,7 @@ PaginationComponent will render different types of paginations, below props are 
 | `showText` |  Can pass any text for first,last,back and next | ["First", "Back", "Next", "Last"] | array |
 | `className` | Can pass any string to write our own CSS | pagination-container | string |
 
-### React google map with autocomplete
+## React google map with autocomplete
 
   This is a simple react component for working with google [autocomplete](https://developers.google.com/maps/documentation/javascript/examples/places-autocomplete)
 
