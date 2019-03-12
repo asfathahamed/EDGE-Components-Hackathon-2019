@@ -122,7 +122,13 @@ Using this component user can not only able to display the list but also can do 
         - *Sorting*, *filter* and *pagination*
         - *Column* modification, *table style*, *table alignment*, *table header type* and *table theme*.
         
+## Component 3: Timeout Component
 
+Using this component developer can provide application idle timeout. Usually if user doesn't perform any action, based on the timeout provided it throws you the timeout event.
+
+## Component 4: Pagination Component
+
+Using this component developer can provide pagination features to their existing table component easily. 
 
 ## Development server
 
