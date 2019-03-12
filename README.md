@@ -6,7 +6,7 @@ This is dynamic table component, which populates table header and body based on 
 
 ## Live demo
 
-* [Demo link]
+* [Demo link] (https://github.com/ERS-HCL/EDGE-Components-Hackathon-2019/blob/ERSEDGE022019004/images/tableCompoenent.png)
 
 ## Dependancies
 
@@ -20,4 +20,5 @@ This is dynamic table component, which populates table header and body based on 
 * Run `npm install` 
 * Run `ng serve`
 
+## Image
 <img src="images/tableCompoenent.png"/>
