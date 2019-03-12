@@ -7,15 +7,15 @@ This project contains below components for the hackathon challenge 2019,
 - Pagination
 - Table component
 
-### Demo Links
+## Demo Links
 
 [Locate me on map - without image gallery](https://locate-on-map-without-gallery.stackblitz.io/)
 
 [Locate me on map - with image gallery](https://locate-on-map-lyuyrx.stackblitz.io/)
 
-[Table component](https://pariwvqz.github.stackblitz.io/)
+[Table component](https://github-t5r7cn-wzxeq7.stackblitz.io/)
 
-### Component 1: Locate on map
+## Component 1: Locate on map
 
 Using this component user can search the places and can view the places on the map with various *icon*, *photos near by*, *address details*, *rating*, *review*, etc.
 
@@ -114,7 +114,15 @@ If you click the marker, it shows you an *Info WIndow* having imformation like *
 ![alt text](https://github.com/ERS-HCL/EDGE-Components-Hackathon-2019/blob/ERSEDGE022019005/src/assets/Component%20-%204.png)
 
 
-### Locate on Map
+## Component 2: Table Component
+
+Using this component user can not only able to display the list but also can do some advance actions like,
+
+        - *Exporting* to *image*, *pdf*, *doc*, and *csv*. 
+        - *Sorting*, *filter* and *pagination*
+        - *Column* modification, *table style*, *table alignment*, *table header type* and *table theme*.
+        
+
 
 ## Development server
 
