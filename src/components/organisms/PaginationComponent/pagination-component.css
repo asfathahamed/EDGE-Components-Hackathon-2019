@@ -1,0 +1,61 @@
+.Pagination {
+  text-align: center;
+}
+
+/* Sample theme change */
+.circle-theme {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 16px;
+  height: 50px;
+  background-color: black;
+  color: white;
+  font-family: "Courier New", Courier, monospace;
+}
+
+.circle-theme .buttons {
+  margin: 10px;
+  cursor: pointer;
+}
+
+.circle-theme .hide {
+  pointer-events: none;
+  cursor: pointer;
+  color: gray;
+}
+
+.circle-theme .show {
+  display: block;
+}
+
+.circle-theme ul {
+  list-style: none;
+  padding-inline-start: 0px;
+}
+
+.circle-theme li {
+  font-size: 16px;
+  display: inline-block;
+  width: 32px;
+  height: 30px;
+  text-align: center;
+  padding-top: 4px;
+  opacity: 0.5;
+  border: 1px solid white;
+  color: black;
+  font-family: "Courier New", Courier, monospace;
+  line-height: 30px;
+  border-radius: 30px;
+  margin: 5px;
+  background-color: white;
+}
+
+.circle-theme li.selected {
+  font-weight: bolder;
+  text-decoration: none;
+  opacity: 1;
+  color: black;
+  font-weight: bold;
+}

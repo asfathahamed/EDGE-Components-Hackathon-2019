@@ -1,0 +1,25 @@
+.location-details-heading {
+    background-color: rebeccapurple;
+    margin: 0 0 5px 0;
+    color: white;
+    padding: 8px;
+}
+.location-details-heading h4 {
+    margin: 0;
+}
+
+.location-details-first-section .form-group, .location-details-second-section .form-group {
+    display: inline-block;
+    padding: 5px 5px 5px 0;
+}
+.location-details-second-section .form-group {
+    padding-bottom: 10px;
+}
+
+.location-details-first-section .form-group label{
+    padding-right: 5px;
+}
+
+.location-details-second-section .form-group.address-details {
+    display: grid;
+}

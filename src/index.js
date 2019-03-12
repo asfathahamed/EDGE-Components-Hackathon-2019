@@ -1,8 +1,9 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import PaginationComponent from './PaginationComponent';
+import './index.css';
+import App from './App';
+import * as serviceWorker from './serviceWorker';
 
-/**
- * Loading paginaton component in root
- */
-ReactDOM.render(<PaginationComponent />, document.getElementById('root'));
+ReactDOM.render(<App />, document.getElementById('root'));
+
+serviceWorker.unregister();
