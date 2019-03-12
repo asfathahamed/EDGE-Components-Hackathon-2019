@@ -13,7 +13,7 @@ This project contains below components for the hackathon challenge 2019,
 
 [Locate me on map - with image gallery](https://locate-on-map-lyuyrx.stackblitz.io/)
 
-[Table component](https://github-t5r7cn-wzxeq7.stackblitz.io/)
+[Table component](https://github-t5r7cn-wgcnu5.stackblitz.io/)
 
 ## Component 1: Locate on map
 
