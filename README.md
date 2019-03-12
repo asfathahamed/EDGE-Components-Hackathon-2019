@@ -15,6 +15,8 @@ This project contains below components for the hackathon challenge 2019,
 
 [Table component](https://github-t5r7cn-wgcnu5.stackblitz.io/)
 
+[Timeout component](https://github-jnofmd.stackblitz.io/)
+
 ## Component 1: Locate on map
 
 Using this component user can search the places and can view the places on the map with various *icon*, *photos near by*, *address details*, *rating*, *review*, etc.
