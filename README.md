@@ -17,7 +17,7 @@ This project contains below components for the hackathon challenge 2019,
 
 [Timeout component](https://github-jnofmd.stackblitz.io/)
 
-[Pagination component](https://kkvipzna.github.stackblitz.io/)
+[Pagination component](https://github-bs7tfh.stackblitz.io/)
 
 ## Component 1: Locate on map
 
