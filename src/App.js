@@ -3,8 +3,10 @@ import './App.css';
 import "@fortawesome/fontawesome-free/css/all.min.css";
 import "bootstrap-css-only/css/bootstrap.min.css";
 import "mdbreact/dist/css/mdb.css";
-import RatingPanelSection from './components/rating/js/rating-components-example.js';
-import SessionTimeOutSample from './components/timeout/js/timeout-sample.js';
+import RatingPanelSection from './demo/rating-components-example.js';
+import SessionTimeOutSample from './demo/timeout-sample.js';
+import ProductRatingDemo from './demo/product-rating-demo.js';
+
 
 
 class App extends Component {
@@ -13,6 +15,7 @@ class App extends Component {
       <div className="App">
 		<SessionTimeOutSample></SessionTimeOutSample>
         	<RatingPanelSection></RatingPanelSection>
+	    	<ProductRatingDemo></ProductRatingDemo>
       </div>
     );
   }
