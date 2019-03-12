@@ -1,0 +1,34 @@
+/* You can add global styles to this file, and also import other style files */
+@import '~bootstrap/dist/css/bootstrap.min.css';
+/* @import url('https://fonts.googleapis.com/css?family=Noto+Serif'); */
+@import url('https://fonts.googleapis.com/css?family=Lobster');
+/* @import url('https://fonts.googleapis.com/css?family=Srisakdi'); */
+
+.row {
+    margin: 0;
+}
+
+.col {
+    padding: 0;
+}
+
+.col-md-2 {
+    padding: 0;
+}
+
+/* .col {
+    padding: 0;
+} */
+
+p {
+    margin: 0;
+}
+
+body {
+    /* font-family: 'Noto Serif', serif; */
+    font-family: 'Lobster', cursive;
+    /* font-family: 'Srisakdi', cursive */
+
+}
+
+

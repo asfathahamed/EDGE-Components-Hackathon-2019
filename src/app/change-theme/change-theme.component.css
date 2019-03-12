@@ -1,0 +1,16 @@
+.showList {
+    position: absolute;
+    z-index: 2;
+    width: 120px;
+    text-align: center;
+    cursor: pointer;
+    right: 10px;
+}
+
+.list-group-item:hover {
+    background: var(--yellow);
+}
+
+.showList li {
+    color: black;
+}
