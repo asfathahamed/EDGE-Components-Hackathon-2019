@@ -1,0 +1,37 @@
+<div class="example-header">
+  <h1>Angular Table</h1>
+</div>
+
+<div class="example-container mat-elevation-z8">
+
+  <mat-table [dataSource]="dataSource" matSort>
+
+    <!-- ID Column -->
+    <ng-container matColumnDef="empId">
+      <mat-header-cell *matHeaderCellDef mat-sort-header> Emp Id </mat-header-cell>
+      <mat-cell *matCellDef="let row"> {{row.empId}} </mat-cell>
+    </ng-container>
+
+    <!-- Progress Column -->
+    <ng-container matColumnDef="name">
+      <mat-header-cell *matHeaderCellDef mat-sort-header> Name </mat-header-cell>
+      <mat-cell *matCellDef="let row"> {{row.name}} </mat-cell>
+    </ng-container>
+
+    <!-- Name Column -->
+    <ng-container matColumnDef="city">
+      <mat-header-cell *matHeaderCellDef mat-sort-header> City </mat-header-cell>
+      <mat-cell *matCellDef="let row"> {{row.city}} </mat-cell>
+    </ng-container>
+
+    <!-- Color Column -->
+    <ng-container matColumnDef="gender">
+      <mat-header-cell *matHeaderCellDef mat-sort-header> Gender </mat-header-cell>
+      <mat-cell *matCellDef="let row" [style.color]="row.color"> {{row.gender}} </mat-cell>
+    </ng-container>
+
+    <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
+    <mat-row *matRowDef="let row; columns: displayedColumns;">
+    </mat-row>
+  </mat-table>
+</div>
