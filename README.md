@@ -6,7 +6,7 @@ This is dynamic table component, which populates table header and body based on 
 
 ## Live demo
 
-* [Demo link] (https://github.com/ERS-HCL/EDGE-Components-Hackathon-2019/blob/ERSEDGE022019004/images/tableCompoenent.png)
+* [Demo link]
 
 ## Dependancies
 
