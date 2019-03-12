@@ -17,6 +17,8 @@ This project contains below components for the hackathon challenge 2019,
 
 [Timeout component](https://github-jnofmd.stackblitz.io/)
 
+[Pagination component](https://kkvipzna.github.stackblitz.io/)
+
 ## Component 1: Locate on map
 
 Using this component user can search the places and can view the places on the map with various *icon*, *photos near by*, *address details*, *rating*, *review*, etc.
