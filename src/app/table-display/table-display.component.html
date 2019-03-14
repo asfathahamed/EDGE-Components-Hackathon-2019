@@ -1,0 +1,46 @@
+<table>
+  <tr>
+    <td (click)="sortTable('name')">
+      Name
+    </td>
+    <td (click)="sortTable('age')">Age</td>
+    <td (click)="sortTable('organisation')">Organisation</td>
+    <td (click)="sortTable('client')">Client</td>
+  </tr>
+  <tr *ngFor="let y of sortedData">
+    <td>
+      {{y.name}}
+    </td>
+    <td>{{y.age}}</td>
+    <td>{{y.organisation}}</td>
+    <td>{{y.client}}</td>
+  </tr>
+</table>
+
+<div>Filter with</div>
+<table>
+  <tr>
+    <td>Name</td>
+    <td><input [(ngModel)]="filterName" (input)="filterTable()"></td>
+  </tr>
+  <tr>
+    <td>Organisation</td>
+    <td><input [(ngModel)]="filterOrg" (input)="filterTable()"></td>
+  </tr>
+  <tr>
+    <td>Client</td>
+    <td><input [(ngModel)]="filterClient" (input)="filterTable()"></td>
+  </tr>
+</table>
+
+<table>
+  <tr *ngIf="filteredData.length">Filtered Data</tr>
+  <tr *ngFor="let y of filteredData">
+    <td>
+      {{y.name}}
+    </td>
+    <td>{{y.age}}</td>
+    <td>{{y.organisation}}</td>
+    <td>{{y.client}}</td>
+  </tr>
+</table>
