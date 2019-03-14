@@ -4,6 +4,8 @@
 
 Locate on Map is a web component developed using angular 7 and bootstrap which is used to locate places on map. Further user can search for near by hospitals, schools, ATM etc for specified location and also find directions from source place to destination place. 
 
+For live demo click [here](https://angular-itmbx6.stackblitz.io/)
+
 ![alt text](img/Maps.jpg)
 
 ### Locating directions
