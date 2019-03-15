@@ -1,6 +1,6 @@
 # EDGE-Components-Hackathon-2019
 # react-rating-component
-To preview the rating components [Click here](https://rjomv8kmyo.codesandbox.io/) 
+To preview the rating components [Click here](https://wq3548m437.codesandbox.io/) 
   
 ## Star
 
