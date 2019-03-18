@@ -1,2 +1,13 @@
-<app-video-media title="Title" src="../assets/sheeran.mp4" scroll="250"></app-video-media>
+<app-video-media
+  title="Title"
+  src="../assets/sheeran.mp4"
+  scroll="250"
+></app-video-media>
 
+<edge-media-player
+  video-ogg="./assets/aquaman.ogg"
+  video-mp4="./assets/aquaman.mp4"
+  [modal]="false"
+  [sticky]="true"
+  sticky-position="right top">
+</edge-media-player>
